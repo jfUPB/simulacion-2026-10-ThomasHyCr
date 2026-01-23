@@ -143,6 +143,12 @@ class Uniform{
 <img width="263" height="261" alt="image" src="https://github.com/user-attachments/assets/361d3680-0bf1-472f-889f-3ab67814109c" />
 
 
+## Actividad #5: Distribución personalizada: Lévy flight
+#### Crea un nuevo sketch en p5.js donde modifiques uno de los ejemplos anteriores y adiciones de Lévy flight.
+#### Explica por qué usaste esta técnica y qué resultados esperabas obtener.
+#### Copia el código en tu bitácora.
+#### Coloca en enlace a tu sketch en p5.js en tu bitácora.
+#### Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
 
 
 Estas bitácoras de aprendizaje buscan evidenciar tu proceso y tus resultados de aprendizaje.
