@@ -86,26 +86,13 @@ function setup() {
 }
 
 function draw() {
+
   uniform.rngPicker();
   background(220);
-  text(value1, 50, 150);
-  line(80, 150, 80+value1, 150);
-  
-  text(value2, 50, 200);
-  line(80, 200, 80+value2, 200);
-  
-  
-  text(value3, 50, 250);
-  line(80, 250, 80+value1, 250);
-  
-  
-  text(value4, 50, 300);
-  line(80, 300, 80+value4, 300);
-  
-  
-  text(value5, 50, 350);
-  line(80, 350, 80+value5, 350);
+  uniform.txtUpdt();
+  uniform.lineDraw();
 }
+
 
 class Uniform{
     constructor() {
@@ -132,6 +119,24 @@ class Uniform{
     }
   
   }
+  
+  txtUpdt(){
+    text(value1, 50, 150);
+    text(value2, 50, 200);
+    text(value3, 50, 250);
+    text(value4, 50, 300);
+    text(value5, 50, 350);
+    
+  }
+  
+  lineDraw(){
+  line(80, 150, 80+value1, 150);
+  line(80, 200, 80+value2, 200);
+  line(80, 250, 80+value1, 250);
+  line(80, 300, 80+value4, 300);
+  line(80, 350, 80+value5, 350);
+  }
+    
 }
 
 ```
@@ -174,6 +179,7 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
 
