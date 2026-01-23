@@ -15,7 +15,9 @@ Se marca un punto en el canvas, y este se va moviendo aleatoriamente, dejando un
 ####
 #### Ocurrió lo que esperabas?, por qué crees que ocurrió?:
 Si ocurrióp lo que esperaba, ya que al analizar el código, el cual no tiene mucha complejidad, se puede evidenciar el funcionamiento del script, y cómo toma las decisiones para elegir la dirección hacia la que se dirige.
+####
 <img width="123" height="92" alt="image" src="https://github.com/user-attachments/assets/f1461adc-ce97-4bfd-9017-5638dd8d2dec" />
+####
 
 ## Actividad #3: Distribuciones de probabilidad
 
@@ -46,5 +48,6 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
