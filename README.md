@@ -33,8 +33,7 @@ Que se favorezca la dirección "y--", ya que esta cuenta con más probabilidades
 El rastro tiende a dirigirse hacía arriba.
 ####
 #### Ocurrió lo que esperabas?, por qué crees que ocurrió?:
-Si ocurrióp lo que esperaba, ya que al analizar el código, el cual no tiene mucha complejidad, se puede evidenciar cómo las probabilidades favorecen la dirección "y-".
-####
+Si ocurrió lo que esperaba, ya que al analizar el código, el cual no tiene mucha complejidad, se puede evidenciar cómo las probabilidades favorecen la dirección "y-".
 
 ## Actividad #3: Distribuciones de probabilidad
 
@@ -42,6 +41,21 @@ Si ocurrióp lo que esperaba, ya que al analizar el código, el cual no tiene mu
 En una distribución uniforme, todos los posibles valores tienen la misma probabilidad de "salir". En cambio en una no uniforme, los posibles valores cuantan con probabilidades distintas.
 ####
 #### Modifica el código de la caminata aleatoria para que utilice una distribución no uniforme, favoreciendo el movimiento hacia la derecha
+``` js
+  step() {
+    const choice = floor(random(10));
+    if (choice <= 4 ) {
+      this.x++;
+    } else if (choice <= 6) {
+      this.x--;
+    } else if (choice <= 8) {
+      this.y++;
+    } else {
+      this.y--;
+    }
+  }
+```
+<img width="138" height="82" alt="image" src="https://github.com/user-attachments/assets/602de620-e8dd-46e3-b9de-221491e8826a" />
 
 
 
@@ -68,6 +82,7 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
 
