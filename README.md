@@ -57,6 +57,92 @@ En una distribución uniforme, todos los posibles valores tienen la misma probab
 ```
 <img width="138" height="82" alt="image" src="https://github.com/user-attachments/assets/602de620-e8dd-46e3-b9de-221491e8826a" />
 
+## Actividad #4: Distribución Normal
+#### Crea un nuevo sketch en p5.js que represente una distribución normal.
+
+
+#### Copia el código en tu bitácora.
+``` js
+
+let uniform
+
+
+let value1=0;
+let value2=0;
+let value3=0;
+let value4=0;
+let value5=0;
+
+function setup() {
+  createCanvas(500, 500);
+  uniform = new Uniform();
+  background(200);
+  text(value1, 50, 150);
+  text(value2, 50, 200);
+  text(value3, 50, 250);
+  text(value4, 50, 300);
+  text(value5, 50, 350);
+
+}
+
+function draw() {
+  uniform.rngPicker();
+  background(220);
+  text(value1, 50, 150);
+  line(80, 150, 80+value1, 150);
+  
+  text(value2, 50, 200);
+  line(80, 200, 80+value2, 200);
+  
+  
+  text(value3, 50, 250);
+  line(80, 250, 80+value1, 250);
+  
+  
+  text(value4, 50, 300);
+  line(80, 300, 80+value4, 300);
+  
+  
+  text(value5, 50, 350);
+  line(80, 350, 80+value5, 350);
+}
+
+class Uniform{
+    constructor() {
+    this.x = width / 2;
+    this.y = height / 2;
+  }
+  
+  rngPicker(){
+    const resultado = floor(random(5));
+    if(resultado == 0){
+      value1++
+    }
+    else if(resultado ==1 ){
+      value2++
+    }
+    else if(resultado ==2 ){
+      value3++
+    }
+    else if(resultado ==3 ){
+      value4++
+    }
+    else if(resultado ==4 ){
+      value5++
+    }
+  
+  }
+}
+
+```
+
+#### Coloca en enlace a tu sketch en p5.js en tu bitácora.
+[Enlace](https://editor.p5js.org/ThomasHyCr/sketches/xZyvPiP1g)
+
+#### Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
+<img width="263" height="261" alt="image" src="https://github.com/user-attachments/assets/361d3680-0bf1-472f-889f-3ab67814109c" />
+
+
 
 
 Estas bitácoras de aprendizaje buscan evidenciar tu proceso y tus resultados de aprendizaje.
@@ -82,6 +168,7 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
 
