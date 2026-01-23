@@ -9,20 +9,40 @@ Se observaron 4 videos, de distintos artistas, y se realizó una discusión de c
 La aleatoriedad es muy importante para el arte generativo ya que permite que cada obra, cada vez que se "ejecuta", sea distinta, y única.
 
 ## Actividad #2: Caminatas aleatorias
+#### Modifica el código del ejemplo Example 0.1: A Traditional Random Walk.
+``` js
+  step() {
+    const choice = floor(random(10));
+    if (choice <= 2 ) {
+      this.x++;
+    } else if (choice <= 4) {
+      this.x--;
+    } else if (choice <= 6) {
+      this.y++;
+    } else {
+      this.y--;
+    }
+  }
+```
+<img width="201" height="155" alt="image" src="https://github.com/user-attachments/assets/51b00547-f54f-4efb-b7e1-03b8c9857e6b" />
+
 #### Qué espero que ocurra antes de ejecutar el código?:
-El código crea un canvas, y crea un walker con 2 funciones, "step", y "show", las cuales son las que mueven el "punto", y lo marcan sobre el canvas. Y para tomar la decisión de hacía que lado se "mueve" el punto, elige un número aleatorio entre 0 y 3, siendo el resultado de la dirección que tomará.
+Que se favorezca la dirección "y--", ya que esta cuenta con más probabilidades de ser elegida.
 ####
 #### Resultado luego de ejecutar el código:
-Se marca un punto en el canvas, y este se va moviendo aleatoriamente, dejando un rastro por dónde se mueve.
+El rastro tiende a dirigirse hacía arriba.
 ####
 #### Ocurrió lo que esperabas?, por qué crees que ocurrió?:
-Si ocurrióp lo que esperaba, ya que al analizar el código, el cual no tiene mucha complejidad, se puede evidenciar el funcionamiento del script, y cómo toma las decisiones para elegir la dirección hacia la que se dirige.
+Si ocurrióp lo que esperaba, ya que al analizar el código, el cual no tiene mucha complejidad, se puede evidenciar cómo las probabilidades favorecen la dirección "y-".
 ####
 <img width="123" height="92" alt="image" src="https://github.com/user-attachments/assets/f1461adc-ce97-4bfd-9017-5638dd8d2dec" />
 
 ## Actividad #3: Distribuciones de probabilidad
 
-
+#### En tus propias palabras cuál es la diferencia entre una distribución uniforme y una no uniforme de números aleatorios.
+En una distribución uniforme, todos los posibles valores tienen la misma probabilidad de "salir". En cambio en una no uniforme, los posibles valores cuantan con probabilidades distintas.
+####
+#### Modifica el código de la caminata aleatoria para que utilice una distribución no uniforme, favoreciendo el movimiento hacia la derecha
 
 
 
@@ -49,6 +69,7 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
 
