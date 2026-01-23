@@ -77,11 +77,7 @@ function setup() {
   createCanvas(500, 500);
   uniform = new Uniform();
   background(200);
-  text(value1, 50, 150);
-  text(value2, 50, 200);
-  text(value3, 50, 250);
-  text(value4, 50, 300);
-  text(value5, 50, 350);
+  uniform.txtUpdt();
 
 }
 
@@ -179,6 +175,7 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
 
