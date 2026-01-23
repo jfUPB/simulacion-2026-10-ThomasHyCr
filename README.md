@@ -1,6 +1,8 @@
 # Bitácoras de aprendizaje 2026-10
 
 # Unidad #1
+<img width="1000" height="419" alt="image" src="https://github.com/user-attachments/assets/23bf9024-9b54-4ed6-991b-e0c4283bf231" />
+
 
 ## Actividad #1: La aleatoriedad en el arte generativo
 Se observaron 4 videos, de distintos artistas, y se realizó una discusión de como la aleatoriedad juega un papel importante en el arte generativo.
@@ -17,7 +19,6 @@ Se marca un punto en el canvas, y este se va moviendo aleatoriamente, dejando un
 Si ocurrióp lo que esperaba, ya que al analizar el código, el cual no tiene mucha complejidad, se puede evidenciar el funcionamiento del script, y cómo toma las decisiones para elegir la dirección hacia la que se dirige.
 ####
 <img width="123" height="92" alt="image" src="https://github.com/user-attachments/assets/f1461adc-ce97-4bfd-9017-5638dd8d2dec" />
-####
 
 ## Actividad #3: Distribuciones de probabilidad
 
@@ -48,6 +49,7 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
 
