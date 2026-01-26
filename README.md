@@ -147,9 +147,85 @@ class Uniform{
 ## Actividad #5: Distribución personalizada: Lévy flight
 #### Crea un nuevo sketch en p5.js donde modifiques uno de los ejemplos anteriores y adiciones de Lévy flight.
 #### Explica por qué usaste esta técnica y qué resultados esperabas obtener.
+Quise usar esta tecnica para que sea bastante evidente cada vez que hay un salto, y que además sea bastante visible cúal salto se realizó mediante un codigo de colores.
+
 #### Copia el código en tu bitácora.
+``` js
+
+let walker;
+let c;
+let s;
+
+function setup() {
+  createCanvas(640, 240);
+  walker = new Walker();
+  background(255);
+  c = color(0);
+  s = 5;
+}
+
+function draw() {
+  walker.step();
+  walker.show();
+}
+
+class Walker {
+  constructor() {
+    this.x = width / 2;
+    this.y = height / 2;
+  }
+
+  show() {
+    stroke(c);
+    strokeWeight(s);
+    point(this.x, this.y);
+  }
+
+  step() {
+    const choice = floor(random(105));
+    if (choice <= 100) {
+      if (choice <= 25) {
+        this.x++;
+      } else if (choice <= 50) {
+        this.x--;
+      } else if (choice <= 75) {
+        this.y++;
+      } else if (choice <= 100) {
+        this.y--;
+      }
+      c = color(0);
+      s = 5;
+      
+    } 
+    else if (choice <= 101) {
+      this.x = this.x + 20;
+      c = color('blue');
+      s = 10;
+    } 
+    else if (choice <= 102) {
+      this.x = this.x - 20;
+      c = color('red');
+      s = 10;
+    } 
+    else if (choice <= 103) {
+      this.y = this.y + 20;
+      c = color('yellow');
+      s = 10;
+    } 
+    else {
+      this.y = this.y - 20;
+      c = color('green');
+      s = 10;
+    }
+  }
+}
+
+```
 #### Coloca en enlace a tu sketch en p5.js en tu bitácora.
+[Enlace](https://editor.p5js.org/ThomasHyCr/sketches/lYHbZZRN7)
 #### Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
+<img width="200" height="183" alt="image" src="https://github.com/user-attachments/assets/50f0e38f-6180-488a-bf12-a1e27cb47d2d" />
+
 
 
 Estas bitácoras de aprendizaje buscan evidenciar tu proceso y tus resultados de aprendizaje.
@@ -175,6 +251,7 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
 
