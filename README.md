@@ -226,6 +226,91 @@ class Walker {
 #### Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
 <img width="200" height="183" alt="image" src="https://github.com/user-attachments/assets/50f0e38f-6180-488a-bf12-a1e27cb47d2d" />
 
+## Actividad #6: Ruido Perlin
+#### Crea un nuevo sketch en p5.js donde los visualices.
+#### Explica el concepto qué resultados esberabas obtener.
+Espero poder representar el ruido, ya no como en una linea, sino en un circulo. Y que también el ruido afecte al color
+
+#### Copia el código en tu bitácora.
+``` js
+
+let t = 0;
+let sliderR;
+let sliderS;
+let sliderD;
+let d;
+
+function setup() {
+  createCanvas(400, 400);
+  
+  sliderR = createSlider(60,200);
+  sliderR.position(50,50);
+  sliderR.size(80);
+  sliderS = createSlider(0,100);
+  sliderS.position(250,50);
+  sliderS.size(80);
+  sliderD = createSlider(20,100);
+  sliderD.position(50,350);
+  sliderD.size(80);
+
+  colorMode(HSB, TWO_PI, 100, 100);
+  
+  
+}
+
+function draw() {
+  background(255);
+  stroke(0);
+  strokeWeight(1);
+  textSize(16);
+  text('Radio',70,40);
+  text('Longitud',260,40);
+  text('Amplitud',60,340);
+  
+  
+  translate(width / 2, height / 2);
+  
+  
+
+  let radius = sliderR.value();
+  let noiseScale = sliderS.value()*0.01;
+  let d = sliderD.value();
+
+  noFill();
+  stroke(0);
+  strokeWeight(3);
+
+  beginShape();
+  let noiseOffset = t;
+
+  for (let angle = 0; angle < TWO_PI; angle += 0.02) {
+
+    let r = radius + noise(noiseOffset) * d;
+
+    let x = r * cos(angle);
+    let y = r * sin(angle);
+
+    stroke(noise(noiseOffset)*2, 80, 90);
+    
+    vertex(x, y);
+
+    noiseOffset += noiseScale;
+  }
+
+  endShape(CLOSE);
+
+  t += 0.01;
+}
+
+
+```
+
+#### Coloca en enlace a tu sketch en p5.js en tu bitácora.
+[Enlace](https://editor.p5js.org/ThomasHyCr/sketches/AGlDTe6Wt)
+
+
+#### Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
+<img width="403" height="396" alt="image" src="https://github.com/user-attachments/assets/12a03e23-8db5-4d00-94cd-43705cc01bda" />
 
 
 Estas bitácoras de aprendizaje buscan evidenciar tu proceso y tus resultados de aprendizaje.
@@ -251,6 +336,7 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
 
