@@ -321,6 +321,7 @@ Tu obra debe:
 
 ### Reporte
 #### Un texto donde expliques el concepto de obra generativa.
+Que al hacer click se genere una flor, en la cual cada petalo tenga un color distinto dictado por un noise, y para que cada petalo sea distinto haya un offset dictado por una distribución uniforme
 
 #### Copia el código en tu bitácora.
 
@@ -364,6 +365,7 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
 
