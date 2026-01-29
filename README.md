@@ -321,7 +321,7 @@ Tu obra debe:
 
 ### Reporte
 #### Un texto donde expliques el concepto de obra generativa.
-Que al hacer click se genere una explosión de fuego artificial, en la cual cada petalo tenga un color distinto dictado por un noise, y para que cada petalo sea distinto haya un offset dictado por una distribución uniforme
+Que al hacer click se genere una explosión de fuego artificial, en la cual cada linea tenga un color distinto dictado por un noise, y para que cada linea sea distinta haya un offset dictado por una distribución uniforme. Además que lentamente se desvanezca.
 
 #### Copia el código en tu bitácora.
 ```js
@@ -424,6 +424,7 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
 
