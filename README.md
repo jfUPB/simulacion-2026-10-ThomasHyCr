@@ -321,13 +321,72 @@ Tu obra debe:
 
 ### Reporte
 #### Un texto donde expliques el concepto de obra generativa.
-Que al hacer click se genere una flor, en la cual cada petalo tenga un color distinto dictado por un noise, y para que cada petalo sea distinto haya un offset dictado por una distribución uniforme
+Que al hacer click se genere una explosión de fuego artificial, en la cual cada petalo tenga un color distinto dictado por un noise, y para que cada petalo sea distinto haya un offset dictado por una distribución uniforme
 
 #### Copia el código en tu bitácora.
+```js
+
+let t = 0.0;
+let xoff;
+
+function setup() {
+  createCanvas(700, 700);
+  background(0);
+  
+}
+
+function draw() {
+  colorMode(RGBA);
+  background(0,0,0,0.01)
+}
+
+function mousePressed(){
+  colorMode(HSB);
+
+beginShape();
+
+let cx = mouseX;
+let cy = mouseY;
+let r = 80;
+  
+
+
+for (let a = 0; a < TWO_PI; a += 0.1) {
+  
+    const choice = floor(random(4));
+    if (choice == 0) {
+      r = r +5;
+    } else if (choice == 1) {
+      r = r -5;
+    } else if (choice == 2) {
+      r = r +5;
+    } else {
+      r = r -5;
+    }
+  
+  xoff = t;
+  
+  
+  let x = cx + cos(a) * r;
+  let y = cy + sin(a) * r;
+  strokeWeight(3);
+  line(mouseX,mouseY,x,y);
+  stroke(noise(xoff)*500, 30, 100);
+  t += 0.01;
+}
+
+endShape(CLOSE);
+  
+  
+}
+
+```
 
 #### Coloca en enlace a tu sketch en p5.js en tu bitácora.
+[Enlace](https://editor.p5js.org/ThomasHyCr/sketches/EKVRcOLbK)
 
 #### Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
+<img width="654" height="645" alt="image" src="https://github.com/user-attachments/assets/bf589e99-33a2-4c8c-9169-f59f9beb92ed" />
 
 
 
@@ -365,6 +424,7 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
 
