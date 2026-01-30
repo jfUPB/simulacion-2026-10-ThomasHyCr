@@ -3,6 +3,8 @@
 # Unidad #1
 <img width="1000" height="419" alt="image" src="https://github.com/user-attachments/assets/23bf9024-9b54-4ed6-991b-e0c4283bf231" />
 
+[Guia](https://juanferfranco.github.io/simulacion-2026-10/)
+
 
 ## Actividad #1: La aleatoriedad en el arte generativo
 Se observaron 4 videos, de distintos artistas, y se realizó una discusión de como la aleatoriedad juega un papel importante en el arte generativo.
@@ -424,6 +426,7 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
 
