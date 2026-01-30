@@ -390,8 +390,15 @@ endShape(CLOSE);
 #### Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
 <img width="654" height="645" alt="image" src="https://github.com/user-attachments/assets/bf589e99-33a2-4c8c-9169-f59f9beb92ed" />
 
+## Actividad #8
 
+En tu bitácora de aprendizaje. Responde con tus propias palabras a las siguientes preguntas.
 
+- Describe la diferencia fundamental entre la aleatoriedad generada por random() y la apariencia de aleatoriedad del Ruido Perlin (noise()). ¿En qué tipo de situación usarías cada una?
+- Explica con tus palabras qué es una distribución de probabilidad. ¿Qué diferencia visual produce una caminata aleatoria con una distribución uniforme versus una con una distribución normal?
+- ¿Cuál es el papel de la aleatoriedad en el arte generativo? Menciona al menos dos funciones distintas que cumple
+- Piensa en tu obra final (Actividad 07). Describe uno de los conceptos de aleatoriedad que usaste y explica por qué fue una elección adecuada para lograr el efecto que buscabas.
+- ¿Qué es un “paseo” o “caminata” (walk) en el contexto de la simulación? ¿Qué característica particular tiene una caminata de tipo “Lévy flight”?
 
 
 
@@ -426,6 +433,7 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
 
