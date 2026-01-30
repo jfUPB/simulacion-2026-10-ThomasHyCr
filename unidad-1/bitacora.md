@@ -9,7 +9,7 @@ Se observaron 4 videos, de distintos artistas, y se realizó una discusión de c
 La aleatoriedad es muy importante para el arte generativo ya que permite que cada obra, cada vez que se "ejecuta", sea distinta, y única.
 
 ## Actividad #2: Caminatas aleatorias
-#### Modifica el código del ejemplo Example 0.1: A Traditional Random Walk.
+- Modifica el código del ejemplo Example 0.1: A Traditional Random Walk.
 ``` js
   step() {
     const choice = floor(random(10));
@@ -26,21 +26,21 @@ La aleatoriedad es muy importante para el arte generativo ya que permite que cad
 ```
 <img width="201" height="155" alt="image" src="https://github.com/user-attachments/assets/51b00547-f54f-4efb-b7e1-03b8c9857e6b" />
 
-#### Qué espero que ocurra antes de ejecutar el código?:
+- Qué espero que ocurra antes de ejecutar el código?:
 Que se favorezca la dirección "y--", ya que esta cuenta con más probabilidades de ser elegida.
 ####
-#### Resultado luego de ejecutar el código:
+- Resultado luego de ejecutar el código:
 El rastro tiende a dirigirse hacía arriba.
 ####
-#### Ocurrió lo que esperabas?, por qué crees que ocurrió?:
+- Ocurrió lo que esperabas?, por qué crees que ocurrió?:
 Si ocurrió lo que esperaba, ya que al analizar el código, el cual no tiene mucha complejidad, se puede evidenciar cómo las probabilidades favorecen la dirección "y-".
 
 ## Actividad #3: Distribuciones de probabilidad
 
-#### En tus propias palabras cuál es la diferencia entre una distribución uniforme y una no uniforme de números aleatorios.
+- En tus propias palabras cuál es la diferencia entre una distribución uniforme y una no uniforme de números aleatorios.
 En una distribución uniforme, todos los posibles valores tienen la misma probabilidad de "salir". En cambio en una no uniforme, los posibles valores cuantan con probabilidades distintas.
 ####
-#### Modifica el código de la caminata aleatoria para que utilice una distribución no uniforme, favoreciendo el movimiento hacia la derecha
+- Modifica el código de la caminata aleatoria para que utilice una distribución no uniforme, favoreciendo el movimiento hacia la derecha
 ``` js
   step() {
     const choice = floor(random(10));
@@ -58,10 +58,10 @@ En una distribución uniforme, todos los posibles valores tienen la misma probab
 <img width="138" height="82" alt="image" src="https://github.com/user-attachments/assets/602de620-e8dd-46e3-b9de-221491e8826a" />
 
 ## Actividad #4: Distribución Normal
-#### Crea un nuevo sketch en p5.js que represente una distribución normal.
+- Crea un nuevo sketch en p5.js que represente una distribución normal.
 
 
-#### Copia el código en tu bitácora.
+- Copia el código en tu bitácora.
 ``` js
 
 let uniform
@@ -137,19 +137,19 @@ class Uniform{
 
 ```
 
-#### Coloca en enlace a tu sketch en p5.js en tu bitácora.
+- Coloca en enlace a tu sketch en p5.js en tu bitácora.
 [Enlace](https://editor.p5js.org/ThomasHyCr/sketches/xZyvPiP1g)
 
-#### Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
+- Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
 <img width="263" height="261" alt="image" src="https://github.com/user-attachments/assets/361d3680-0bf1-472f-889f-3ab67814109c" />
 
 
 ## Actividad #5: Distribución personalizada: Lévy flight
-#### Crea un nuevo sketch en p5.js donde modifiques uno de los ejemplos anteriores y adiciones de Lévy flight.
-#### Explica por qué usaste esta técnica y qué resultados esperabas obtener.
+- Crea un nuevo sketch en p5.js donde modifiques uno de los ejemplos anteriores y adiciones de Lévy flight.
+- Explica por qué usaste esta técnica y qué resultados esperabas obtener.
 Quise usar esta tecnica para que sea bastante evidente cada vez que hay un salto, y que además sea bastante visible cúal salto se realizó mediante un codigo de colores.
 
-#### Copia el código en tu bitácora.
+- opia el código en tu bitácora.
 ``` js
 
 let walker;
@@ -221,17 +221,17 @@ class Walker {
 }
 
 ```
-#### Coloca en enlace a tu sketch en p5.js en tu bitácora.
+- Coloca en enlace a tu sketch en p5.js en tu bitácora.
 [Enlace](https://editor.p5js.org/ThomasHyCr/sketches/lYHbZZRN7)
-#### Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
+- Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
 <img width="200" height="183" alt="image" src="https://github.com/user-attachments/assets/50f0e38f-6180-488a-bf12-a1e27cb47d2d" />
 
 ## Actividad #6: Ruido Perlin
-#### Crea un nuevo sketch en p5.js donde los visualices.
-#### Explica el concepto qué resultados esberabas obtener.
+- Crea un nuevo sketch en p5.js donde los visualices.
+- Explica el concepto qué resultados esberabas obtener.
 Espero poder representar el ruido, ya no como en una linea, sino en un circulo. Y que también el ruido afecte al color
 
-#### Copia el código en tu bitácora.
+- Copia el código en tu bitácora.
 ``` js
 
 let t = 0;
@@ -305,11 +305,11 @@ function draw() {
 
 ```
 
-#### Coloca en enlace a tu sketch en p5.js en tu bitácora.
+- Coloca en enlace a tu sketch en p5.js en tu bitácora.
 [Enlace](https://editor.p5js.org/ThomasHyCr/sketches/AGlDTe6Wt)
 
 
-#### Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
+- Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
 <img width="403" height="396" alt="image" src="https://github.com/user-attachments/assets/12a03e23-8db5-4d00-94cd-43705cc01bda" />
 
 ## Actividad #7: Creación de obra generativa
@@ -319,11 +319,11 @@ Tu obra debe:
 - Usar al menos tres conceptos estudiados en esta unidad COMBINADOS de manera creativa y coherente.
 - Tu obra de ser interactiva y generativa en tiempo real. Puedes usar el mouse, el teclado o cualquier otro sensor de entrada para interactuar con la obra.
 
-### Reporte
-#### Un texto donde expliques el concepto de obra generativa.
+- Reporte
+- Un texto donde expliques el concepto de obra generativa.
 Que al hacer click se genere una explosión de fuego artificial, en la cual cada linea tenga un color distinto dictado por un noise, y para que cada linea sea distinta haya un offset dictado por una distribución uniforme. Además que lentamente se desvanezca.
 
-#### Copia el código en tu bitácora.
+- Copia el código en tu bitácora.
 ```js
 
 let t = 0.0;
@@ -382,10 +382,10 @@ endShape(CLOSE);
 
 ```
 
-#### Coloca en enlace a tu sketch en p5.js en tu bitácora.
+- Coloca en enlace a tu sketch en p5.js en tu bitácora.
 [Enlace](https://editor.p5js.org/ThomasHyCr/sketches/EKVRcOLbK)
 
-#### Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
+- Selecciona una captura de pantalla de tu sketch y colócala en tu bitácora.
 <img width="654" height="645" alt="image" src="https://github.com/user-attachments/assets/bf589e99-33a2-4c8c-9169-f59f9beb92ed" />
 
 ## Actividad #8
@@ -408,6 +408,7 @@ El ruido fué un concepto esencial, ya que necesitaba tener colores aleatorios, 
 
 - ¿Qué es un “paseo” o “caminata” (walk) en el contexto de la simulación? ¿Qué característica particular tiene una caminata de tipo “Lévy flight”?
 Es un avance que se realiza constantemente, ya sea aleatoria, o controlada, en el caso de Lévy flight, en esta hay una cierta probabilidad, por lo general baja, de realizar un salto, es decir, un avance que se "salta" cierta cantidad de pasos.
+
 
 
 
