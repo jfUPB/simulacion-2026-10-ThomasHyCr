@@ -395,10 +395,21 @@ endShape(CLOSE);
 En tu bitácora de aprendizaje. Responde con tus propias palabras a las siguientes preguntas.
 
 - Describe la diferencia fundamental entre la aleatoriedad generada por random() y la apariencia de aleatoriedad del Ruido Perlin (noise()). ¿En qué tipo de situación usarías cada una?
+La generada por el random() funciona con una distribucción uniforme, porque no favorece a ningún valor en especifico. Y la aleatoriedad del ruido perlin noise(), funciona con una transición gradual, sin saltos, se mueve entre valores "adyacentes".
+Usaría random() cuando quiera algo que tenga un comportamiento caotico, o con una distribución uniforme, y noise(), cuando quiera aleatoriedad pero suavizada, con transiciones "tranquilas".
+
+
 - Explica con tus palabras qué es una distribución de probabilidad. ¿Qué diferencia visual produce una caminata aleatoria con una distribución uniforme versus una con una distribución normal?
+Es la forma en que se distribuye las probabilidades de que algún evento ocurra. En una caminata aleatoria, con la distribución uniforme va a ser caotica, dirigiendose a cada dirección con la misma probabilidad. Y con la distribución normal se va a tender a cierta dirección con más frecuencia.
+  
 - ¿Cuál es el papel de la aleatoriedad en el arte generativo? Menciona al menos dos funciones distintas que cumple
+Una de ellas es que siepre que se ejecute sea de una forma distinta, y la otra es de darle una apariencia más natural, ya que hace que no sea tan rigido o dictado.
+  
 - Piensa en tu obra final (Actividad 07). Describe uno de los conceptos de aleatoriedad que usaste y explica por qué fue una elección adecuada para lograr el efecto que buscabas.
+El ruido fué un concepto esencial, ya que necesitaba tener colores aleatorios, pero que tuvieran una transición entre ellos que no fuera muy caotica,
+
 - ¿Qué es un “paseo” o “caminata” (walk) en el contexto de la simulación? ¿Qué característica particular tiene una caminata de tipo “Lévy flight”?
+Es un avance que se realiza constantemente, ya sea aleatoria, o controlada, en el caso de Lévy flight, en esta hay una cierta probabilidad, por lo general baja, de realizar un salto, es decir, un avance que se "salta" cierta cantidad de pasos.
 
 
 
@@ -433,6 +444,7 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
 
 
 
