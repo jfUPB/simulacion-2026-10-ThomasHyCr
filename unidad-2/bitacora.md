@@ -1,4 +1,5 @@
 # Unidad 2
+<img width="1000" height="462" alt="image" src="https://github.com/user-attachments/assets/71de743e-46be-4982-a073-ac658baf841a" />
 
 ## Bitácora de proceso de aprendizaje
 
@@ -25,3 +26,4 @@
 ## Bitácora de reflexión
 
 ### Actividad #10: 
+
