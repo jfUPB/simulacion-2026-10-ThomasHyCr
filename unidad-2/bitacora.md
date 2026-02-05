@@ -5,11 +5,61 @@
 
 ### Actividad #2: Introducción a los vectores
 - ¿Cómo funciona la suma dos vectores en p5.js?
+Se deben sumar sus componentes individualmente, lo que da un nuevo vector como resultado.
+
 - ¿Por qué esta línea position = position + velocity; no funciona?
+Porque se está intentando sumar los vectores explicitamente, en lugar de implicitamente, mediante la suma de sus componentes.
 
 ### Actividad #3: Repasa
 - ¿Qué tuviste que hacer para hacer la conversión propuesta?
+Cambiar el constructor, para que creara el vector, y en point(), ponerle que reciba el vector, y finalmente en el random walker, que le sumara o restara al componente correspondiente.
+
 - Escribe el código que utilizaste para resolver el ejercicio.
+```js
+
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
+let walker;
+
+function setup() {
+  createCanvas(640, 240);
+  walker = new Walker();
+  background(0);
+}
+
+function draw() {
+  walker.step();
+  walker.show();
+}
+
+class Walker {
+  constructor() {
+    this.vector = createVector(width/2,height/2);
+  }
+
+  show() {
+    stroke(255);
+    point(this.vector);
+  }
+
+  step() {
+    const choice = floor(random(4));
+    if (choice == 0) {
+      this.vector.x++;
+    } else if (choice == 1) {
+      this.vector.x--;
+    } else if (choice == 2) {
+      this.vector.y++;
+    } else {
+      this.vector.y--;
+    }
+  }
+}
+
+
+```
 
 ### Actividad #4: Experimenta
 - ¿Qué resultado esperas obtener en el programa anterior?
@@ -45,6 +95,7 @@
 ## Bitácora de reflexión
 
 ### Actividad #10: 
+
 
 
 
