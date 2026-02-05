@@ -77,19 +77,34 @@ referencia, porque se modifica el original
 - ¿Qué aprendiste?
 diferencia de los pasos, y cómo se podrian usar.
 
-
 ### Actividad #5: Explora posibilidades
 - ¿Para qué sirve el método mag()? Nota que hay otro método llamado magSq(). ¿Cuál es la diferencia entre ambos? ¿Cuál es más eficiente?
+Para sacar la magnitud de un vector, y para la magnitud al cuadrado. Dependiendo de lo que se requiera cualquiera podría ser el más eficiente, ya que ahorra el uso de una operación.
+
 - ¿Para qué sirve el método normalize()?
+Para normalizar un vector, para obtener su dirección.
+
 - Te encuentras con un periodista en la calle y te pregunta ¿Para qué sirve el método dot()? ¿Qué le responderías en un frase?
+Para hallar el producto punto entre dos vectores
+
 - El método dot() tiene una versión estática y una de instancia. ¿Cuál es la diferencia entre ambas?
+La forma en que se llama al método.
+
 - Ahora el mismo periodista curioso de antes te pregunta si le puedes dar una intuición geométrica acerca del producto cruz. Entonces te pregunta ¿Cuál es la interpretación geométrica del producto cruz de dos vectores? Tu respuesta debe incluir qué pasa con la orientación y la magnitud del vector resultante.
+La orientación es perpendicular al plano que forman los dos vectores, y su magnitud es el area de la forma que generan.
+
 - ¿Para que te puede servir el método dist()?
+Para hallar la distancia entre dos puntos.
+
 - ¿Para qué sirven los métodos normalize() y limit()?
+Para normalizar y para limitar.
+
 
 ### Actividad #6: Interpolamos?
 - El código que genera el resultado que te pedí.
+
 - ¿Cómo funciona lerp() y lerpColor().
+
 - ¿Cómo se dibuja una flecha usando drawArrow()?
 
 ### Actividad #7: Motion 101
@@ -105,6 +120,7 @@ diferencia de los pasos, y cómo se podrian usar.
 ## Bitácora de reflexión
 
 ### Actividad #10: 
+
 
 
 
