@@ -154,9 +154,11 @@ function drawArrow(base, vec, myColor) {
 }
 ```
 - ¿Cómo funciona lerp() y lerpColor().
-funciona para hallar el valor de la sección especificada entre 2 puntos. Y el lerp color realiza lo mismo, pero para el color, de forma que haya un color entre los dos colores especificados.
+
+Funciona para hallar el valor de la sección especificada entre 2 puntos. Y el lerp color realiza lo mismo, pero para el color, de forma que haya un color entre los dos colores especificados.
 
 - ¿Cómo se dibuja una flecha usando drawArrow()?
+
 Primero especifica las caracteristicas de grosor y color de la linea, luego traslada el sistema de coordenadas al parametro de base que le fué dado, luego dibuja la linea, desde la base, hasta el vector que le fué dado, después rota el sistema de coordenadas en la dirección a la que apunta el vector de la flecha que se está dibujando, define el tamaño de la punta de la flecha, nuevamente traslada el sistema de coordenadas al final de la linea, dibuja la punta de la flecha, y reestablece el sistema de coordenadas a la normalidad,
 
 ### Actividad #7: Motion 101
@@ -172,6 +174,7 @@ Primero especifica las caracteristicas de grosor y color de la linea, luego tras
 ## Bitácora de reflexión
 
 ### Actividad #10: 
+
 
 
 
