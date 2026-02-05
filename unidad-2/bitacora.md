@@ -63,10 +63,20 @@ class Walker {
 
 ### Actividad #4: Experimenta
 - ¿Qué resultado esperas obtener en el programa anterior?
+Que se imprima en el log el vector 2 veces, primero el original, y segundo el cambiado
+
 - ¿Qué resultado obtuviste?
+El esperado
+
 - Recuerda los conceptos de paso por valor y paso por referencia en programación.
+Paso por valor es pasando una copia del valor, y el por referencia, pasa una referencia del valor almacenado, por lo que si se puede cambiar el original.
+
 - ¿Qué tipo de paso se está realizando en el código?
+referencia, porque se modifica el original
+
 - ¿Qué aprendiste?
+diferencia de los pasos, y cómo se podrian usar.
+
 
 ### Actividad #5: Explora posibilidades
 - ¿Para qué sirve el método mag()? Nota que hay otro método llamado magSq(). ¿Cuál es la diferencia entre ambos? ¿Cuál es más eficiente?
@@ -95,6 +105,7 @@ class Walker {
 ## Bitácora de reflexión
 
 ### Actividad #10: 
+
 
 
 
