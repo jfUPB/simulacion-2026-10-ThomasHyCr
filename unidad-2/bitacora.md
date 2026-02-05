@@ -102,10 +102,62 @@ Para normalizar y para limitar.
 
 ### Actividad #6: Interpolamos?
 - El código que genera el resultado que te pedí.
+```js
+let off= 0.0;
+let forward;
 
+function setup() {
+    createCanvas(500, 500);
+}
+
+function draw() {
+    background(0);
+
+    let v0 = createVector(50, 50);
+    let v1 = createVector(400, 0);
+    let v2 = createVector(0, 400);
+    let v3 = p5.Vector.lerp(v1, v2, off);
+    let endV1 = v0.copy().add(v1);
+    let endV2 = v0.copy().add(v2);
+    let v4 = p5.Vector.sub(endV2,endV1);
+    drawArrow(v0, v1, 'red');
+    drawArrow(v0, v2, 'blue');
+    drawArrow(v0, v3, 'purple');
+    drawArrow(endV1, v4, 'green');
+  if (forward){
+    off=off+0.05;
+  }
+  else{
+    off=off-0.05;
+  }
+  if(off>=1.0){
+    forward=false;
+  }
+  else if(off<=0.0){
+    forward=true;
+  }
+    
+}
+
+function drawArrow(base, vec, myColor) {
+    push();
+    stroke(myColor);
+    strokeWeight(3);
+    fill(myColor);
+    translate(base.x, base.y);
+    line(0, 0, vec.x, vec.y);
+    rotate(vec.heading());
+    let arrowSize = 7;
+    translate(vec.mag() - arrowSize, 0);
+    triangle(0, arrowSize / 2, 0, -arrowSize / 2, arrowSize, 0);
+    pop();
+}
+```
 - ¿Cómo funciona lerp() y lerpColor().
+funciona para hallar el valor de la sección especificada entre 2 puntos. Y el lerp color realiza lo mismo, pero para el color, de forma que haya un color entre los dos colores especificados.
 
 - ¿Cómo se dibuja una flecha usando drawArrow()?
+Primero especifica las caracteristicas de grosor y color de la linea, luego traslada el sistema de coordenadas al parametro de base que le fué dado, luego dibuja la linea, desde la base, hasta el vector que le fué dado, después rota el sistema de coordenadas en la dirección a la que apunta el vector de la flecha que se está dibujando, define el tamaño de la punta de la flecha, nuevamente traslada el sistema de coordenadas al final de la linea, dibuja la punta de la flecha, y reestablece el sistema de coordenadas a la normalidad,
 
 ### Actividad #7: Motion 101
 
@@ -120,6 +172,7 @@ Para normalizar y para limitar.
 ## Bitácora de reflexión
 
 ### Actividad #10: 
+
 
 
 
