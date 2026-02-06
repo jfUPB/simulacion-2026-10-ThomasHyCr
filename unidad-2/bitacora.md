@@ -162,8 +162,15 @@ Funciona para hallar el valor de la sección especificada entre 2 puntos. Y el l
 Primero especifica las caracteristicas de grosor y color de la linea, luego traslada el sistema de coordenadas al parametro de base que le fué dado, luego dibuja la linea, desde la base, hasta el vector que le fué dado, después rota el sistema de coordenadas en la dirección a la que apunta el vector de la flecha que se está dibujando, define el tamaño de la punta de la flecha, nuevamente traslada el sistema de coordenadas al final de la linea, dibuja la punta de la flecha, y reestablece el sistema de coordenadas a la normalidad,
 
 ### Actividad #7: Motion 101
+- Cuál es el concepto del marco motion 101 y cómo se interpreta geométricamente.
+Son los conceptos básicos del movimiento de fisica mecanica, pero simplificados para aplicarlos fácilmente a las aplicaciones. Geometricamente sería como bajo que reglas se rige el movimiento de las figuras que tenemos en las aplicaciones.
+
+- ¿Cómo se aplica motion 101 en el ejemplo?
+Se simula una caida, dandole a la figura una aceleración constante hacia abajo, actuando como la gravedad. Y además también se le pone una velocidad limite, de forma que no continua aumentando su velocidad indefinidamente.
 
 ### Actividad #8: Experimentando con la aceleración
+- ¿Qué observaste cuando usas cada una de las aceleraciones propuestas?
+Con aceleración constante, en el caso del ejemplo 1.8, funciona como una simulación sencilla de la gravedad. En la de aceleración aleatoria tiene un comportamiento bastante erratico, pero en cierta forma como natural. Y finalmente con la aceleración hacia el mouse, funciona como una especia de "seguidor", que intenta estar siempre en la posición del mouse, pero que debido a las aceleraciones, le cuesta estar quieto en un solo sitio.
 
 
 
@@ -174,6 +181,7 @@ Primero especifica las caracteristicas de grosor y color de la linea, luego tras
 ## Bitácora de reflexión
 
 ### Actividad #10: 
+
 
 
 
