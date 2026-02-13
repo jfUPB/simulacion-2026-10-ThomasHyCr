@@ -293,6 +293,7 @@ https://editor.p5js.org/ThomasHyCr/sketches/reOL8vR9h
 ### Actividad #10: 
 
 - Describe el concepto de tu obra generativa. Explica el concepto de tu obra generativa.
+####
 Quería crear una especie de "creador de amebas", ya que luego de experimentar varias veces con el código de Jeffrey Ventrella, hubo una iteración en la que la forma en que se comportaban las particulas, era similar al movimiento de las amebas, de modo que intenté recrearlo ayudandome de chat GPT, para crear las reglas de las interacciónes, y le añadí interacción con el mouse y un poco de aleatoriedad.
   
 - El código de la aplicación.
@@ -538,12 +539,15 @@ class ParticleTypeC extends BaseParticle {
 ```
   
 - Un enlace al proyecto en el editor de p5.js.
+####
 https://editor.p5js.org/ThomasHyCr/sketches/cp5th1pa-
   
 - Selecciona capturas de pantalla representativas de tu pieza de arte generativa.
+####
 <img width="620" height="512" alt="image" src="https://github.com/user-attachments/assets/f3cf3faa-6eb0-4229-8234-85c62105283b" />
-
+####
 <img width="353" height="332" alt="image" src="https://github.com/user-attachments/assets/3eb75343-6910-49df-a4ac-08fb9e19688d" />
+
 
 
 
