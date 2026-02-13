@@ -184,17 +184,369 @@ Con aceleración constante, en el caso del ejemplo 1.8, funciona como una simula
 Quería hacer una simulación de una tormenta de lluvia en mitad del oceano, de modo que los conceptos de motion 101 que usé se aplicaron a la lluvia, y para las nubes y el oceano, usé un noise. Me evoca "contradictoriamente" una calma, en mitad de la tormenta.
 
 - El código de la aplicación.
+```js
 
+let rain = [];
+
+function setup() {
+  createCanvas(900, 600);
+  
+  for (let i = 0; i < 150; i++) {
+    rain.push({
+      pos: createVector(random(width), random(height)),
+      vel: createVector(0, 0)
+    });
+  }
+}
+
+function draw() {
+  background(0, 50);
+  stroke("rgb(221,255,251)");
+
+  // Mapear mouseX a viento horizontal
+  let windStrength = map(mouseX, 0, width, -0.2, 0.2);
+  
+  // Viento + gravedad
+  let wind = createVector(windStrength, 0.1);
+
+  for (let r of rain) {
+    
+    let prev = r.pos.copy();
+    
+    // Aplicar aceleración (viento)
+    r.vel.add(wind);
+    r.vel.limit(10,10);
+    r.pos.add(r.vel);
+    
+    line(prev.x, prev.y, r.pos.x, r.pos.y);
+    
+    // Reiniciar cuando salen
+    if (r.pos.y > height) {
+      r.pos.y = 0;
+      r.vel.y=5;
+    }
+    
+    // Reaparecer lateralmente
+    if (r.pos.x > width) r.pos.x = 0;
+    if (r.pos.x < 0) r.pos.x = width;
+  }
+  
+  clouds();
+  sea();
+  
+  
+}
+
+function clouds(){
+  
+  // Set the noise level and scale.
+  let noiseLevel = 100;
+  let noiseScale = 0.003;
+
+  // Iterate from left to right.
+  for (let x = 0; x < width; x += 1) {
+    // Scale the input coordinates.
+    let nx = noiseScale * x;
+    let nt = noiseScale * frameCount;
+
+    // Compute the noise value.
+    let y = noiseLevel * noise(nx, nt);
+    
+    // Draw the line.
+    stroke("rgb(187,187,187)");
+    line(x, 0, x, y);
+  }
+  
+}
+
+function sea(){
+// Set the noise level and scale.
+let noiseLevel = 200;
+let noiseScale = 0.008;
+
+for (let x = 0; x < width; x += 1) {
+  let nx = noiseScale * x;
+  let nt = noiseScale * frameCount;
+
+  let y = noiseLevel * noise(nx, nt);
+
+  stroke("rgb(23,60,104)");
+  line(x, height, x, height - y);
+}
+
+  
+}
+
+
+```
 
 - Un enlace al proyecto en el editor de p5.js.
 https://editor.p5js.org/ThomasHyCr/sketches/reOL8vR9h
 
 - Selecciona capturas de pantalla representativas de tu pieza de arte generativa.
+<img width="851" height="584" alt="image" src="https://github.com/user-attachments/assets/6559ea45-7d53-48d5-bafe-654e079856be" />
+
 
 
 ## Bitácora de reflexión
 
 ### Actividad #10: 
+
+- Describe el concepto de tu obra generativa. Explica el concepto de tu obra generativa.
+Quería crear una especie de "creador de amebas", ya que luego de experimentar varias veces con el código de Jeffrey Ventrella, hubo una iteración en la que la forma en que se comportaban las particulas, era similar al movimiento de las amebas, de modo que intenté recrearlo ayudandome de chat GPT, para crear las reglas de las interacciónes, y le añadí interacción con el mouse y un poco de aleatoriedad.
+  
+- El código de la aplicación.
+```js
+
+let particlesA = [];
+let particlesB = [];
+let particlesC = [];
+
+let minDistance = 60;
+let separationStrength = 0.8;
+let mouseAttractionStrength = 2;
+
+// Colores globales por tipo
+let colorA, colorB, colorC;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+
+  // Generar colores aleatorios para cada tipo
+  colorA = color(random(255), random(255), random(255));
+  colorB = color(random(255), random(255), random(255));
+  colorC = color(random(255), random(255), random(255));
+
+  for (let i = 0; i < 30; i++) {
+    particlesA.push(new ParticleTypeA(random(width), random(height)));
+    particlesB.push(new ParticleTypeB(random(width), random(height)));
+    particlesC.push(new ParticleTypeC(random(width), random(height)));
+  }
+}
+
+function draw() {
+  background(20);
+
+  // =============================
+  // A ACELERA HACIA EL MOUSE
+  // =============================
+
+  let mouse = createVector(mouseX, mouseY);
+
+  for (let a of particlesA) {
+    let forceToMouse = p5.Vector.sub(mouse, a.pos);
+    let distance = forceToMouse.mag();
+
+    distance = constrain(distance, 5, 200);
+    forceToMouse.normalize();
+
+    let strength = mouseAttractionStrength / (distance * 0.05);
+    forceToMouse.mult(strength);
+
+    a.applyForce(forceToMouse);
+  }
+
+  // =============================
+  // INTERACCIONES ENTRE TIPOS
+  // =============================
+
+  // A atrae B
+  for (let a of particlesA) {
+    for (let b of particlesB) {
+      b.applyForce(attractForce(a, b, 0.2));
+    }
+  }
+
+  // B atrae C
+  for (let b of particlesB) {
+    for (let c of particlesC) {
+      c.applyForce(attractForce(b, c, 0.15));
+    }
+  }
+
+  // A y C se repelen
+  for (let a of particlesA) {
+    for (let c of particlesC) {
+      let rep = attractForce(a, c, -0.25);
+      a.applyForce(rep);
+      c.applyForce(p5.Vector.mult(rep, -1));
+    }
+  }
+
+  // C se repelen entre sí
+  for (let i = 0; i < particlesC.length; i++) {
+    for (let j = i + 1; j < particlesC.length; j++) {
+
+      let c1 = particlesC[i];
+      let c2 = particlesC[j];
+
+      let rep = attractForce(c1, c2, -0.3);
+
+      c1.applyForce(rep);
+      c2.applyForce(p5.Vector.mult(rep, -1));
+    }
+  }
+
+  // =============================
+  // SEPARACIÓN GLOBAL
+  // =============================
+
+  let allParticles = [...particlesA, ...particlesB, ...particlesC];
+
+  for (let i = 0; i < allParticles.length; i++) {
+    for (let j = i + 1; j < allParticles.length; j++) {
+
+      let p1 = allParticles[i];
+      let p2 = allParticles[j];
+
+      let force = separationForce(p1, p2);
+
+      p1.applyForce(force);
+      p2.applyForce(p5.Vector.mult(force, -1));
+    }
+  }
+
+  // =============================
+  // ACTUALIZAR Y MOSTRAR
+  // =============================
+
+  for (let p of particlesA) { p.update(); p.display(); }
+  for (let p of particlesB) { p.update(); p.display(); }
+  for (let p of particlesC) { p.update(); p.display(); }
+}
+
+/* =============================
+   FUERZA TIPO GRAVITACIONAL
+============================= */
+
+function attractForce(source, target, strength) {
+  let force = p5.Vector.sub(source.pos, target.pos);
+  let distance = force.mag();
+
+  distance = constrain(distance, 5, 120);
+  force.normalize();
+
+  let magnitude = strength / (distance * 0.05);
+  force.mult(magnitude);
+
+  return force;
+}
+
+/* =============================
+   SEPARACIÓN GLOBAL
+============================= */
+
+function separationForce(p1, p2) {
+  let force = p5.Vector.sub(p1.pos, p2.pos);
+  let distance = force.mag();
+
+  if (distance > 0 && distance < minDistance) {
+    force.normalize();
+    let strength = separationStrength * (1 - distance / minDistance);
+    force.mult(strength);
+    return force;
+  }
+
+  return createVector(0, 0);
+}
+
+/* =============================
+   CLASE BASE
+============================= */
+
+class BaseParticle {
+  constructor(x, y) {
+    this.pos = createVector(x, y);
+    this.vel = p5.Vector.random2D();
+    this.acc = createVector(0, 0);
+    this.maxSpeed = 3;
+  }
+
+  applyForce(force) {
+    this.acc.add(force);
+  }
+
+  update() {
+    this.vel.add(this.acc);
+    this.vel.limit(this.maxSpeed);
+    this.pos.add(this.vel);
+    this.acc.mult(0);
+    this.edges();
+  }
+
+  edges() {
+    if (this.pos.x > width) this.pos.x = 0;
+    if (this.pos.x < 0) this.pos.x = width;
+    if (this.pos.y > height) this.pos.y = 0;
+    if (this.pos.y < 0) this.pos.y = height;
+  }
+}
+
+/* =============================
+   TIPO A
+============================= */
+
+class ParticleTypeA extends BaseParticle {
+  constructor(x, y) {
+    super(x, y);
+    this.size = 8;
+  }
+
+  display() {
+    noStroke();
+    fill(colorA);
+    ellipse(this.pos.x, this.pos.y, this.size);
+  }
+}
+
+/* =============================
+   TIPO B
+============================= */
+
+class ParticleTypeB extends BaseParticle {
+  constructor(x, y) {
+    super(x, y);
+    this.size = 12;
+  }
+
+  display() {
+    noStroke();
+    fill(colorB);
+    rect(this.pos.x, this.pos.y, this.size, this.size);
+  }
+}
+
+/* =============================
+   TIPO C
+============================= */
+
+class ParticleTypeC extends BaseParticle {
+  constructor(x, y) {
+    super(x, y);
+    this.size = 18;
+  }
+
+  display() {
+    noFill();
+    stroke(colorC);
+    strokeWeight(2);
+    ellipse(this.pos.x, this.pos.y, this.size);
+  }
+}
+
+
+```
+  
+- Un enlace al proyecto en el editor de p5.js.
+https://editor.p5js.org/ThomasHyCr/sketches/cp5th1pa-
+  
+- Selecciona capturas de pantalla representativas de tu pieza de arte generativa.
+<img width="620" height="512" alt="image" src="https://github.com/user-attachments/assets/f3cf3faa-6eb0-4229-8234-85c62105283b" />
+
+<img width="353" height="332" alt="image" src="https://github.com/user-attachments/assets/3eb75343-6910-49df-a4ac-08fb9e19688d" />
+
+
+
 
 
 
