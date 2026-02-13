@@ -180,10 +180,22 @@ Con aceleración constante, en el caso del ejemplo 1.8, funciona como una simula
 ## Bitácora de aplicación 
 
 ### Actividad #9: Creación de obra generativa
+- Describe el concepto de tu obra generativa. Explica el concepto de tu obra generativa, qué regla aplicaste para la aceleración y por qué, si fue una decisión de diseño, o qué te evoca, si fue una exploración artística.
+Quería hacer una simulación de una tormenta de lluvia en mitad del oceano, de modo que los conceptos de motion 101 que usé se aplicaron a la lluvia, y para las nubes y el oceano, usé un noise. Me evoca "contradictoriamente" una calma, en mitad de la tormenta.
+
+- El código de la aplicación.
+
+
+- Un enlace al proyecto en el editor de p5.js.
+https://editor.p5js.org/ThomasHyCr/sketches/reOL8vR9h
+
+- Selecciona capturas de pantalla representativas de tu pieza de arte generativa.
+
 
 ## Bitácora de reflexión
 
 ### Actividad #10: 
+
 
 
 
