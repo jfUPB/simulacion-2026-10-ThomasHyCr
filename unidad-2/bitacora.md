@@ -542,8 +542,9 @@ https://editor.p5js.org/ThomasHyCr/sketches/cp5th1pa-
   
 - Selecciona capturas de pantalla representativas de tu pieza de arte generativa.
 ####
-<img width="620" height="512" alt="image" src="https://github.com/user-attachments/assets/f3cf3faa-6eb0-4229-8234-85c62105283b" />
-<img width="353" height="332" alt="image" src="https://github.com/user-attachments/assets/3eb75343-6910-49df-a4ac-08fb9e19688d" />
+<img width="401" height="421" alt="image" src="https://github.com/user-attachments/assets/36d06948-5471-432b-b68a-146ee4b25a23" />
+<img width="543" height="493" alt="image" src="https://github.com/user-attachments/assets/4245475a-39d3-4d3b-ab19-d6ad8d741f32" />
+
 
 
 
