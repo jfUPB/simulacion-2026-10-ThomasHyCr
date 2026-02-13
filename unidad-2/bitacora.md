@@ -298,14 +298,13 @@ Quería crear una especie de "creador de amebas", ya que luego de experimentar v
   
 - El código de la aplicación.
 ```js
-
 let particlesA = [];
 let particlesB = [];
 let particlesC = [];
 
 let minDistance = 60;
-let separationStrength = 0.8;
-let mouseAttractionStrength = 2;
+let separationStrength = 2;
+let mouseAttractionStrength = 100;
 
 // Colores globales por tipo
 let colorA, colorB, colorC;
@@ -318,7 +317,7 @@ function setup() {
   colorB = color(random(255), random(255), random(255));
   colorC = color(random(255), random(255), random(255));
 
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < 50; i++) {
     particlesA.push(new ParticleTypeA(random(width), random(height)));
     particlesB.push(new ParticleTypeB(random(width), random(height)));
     particlesC.push(new ParticleTypeC(random(width), random(height)));
@@ -326,7 +325,7 @@ function setup() {
 }
 
 function draw() {
-  background(20);
+  background(0, 20);
 
   // =============================
   // A ACELERA HACIA EL MOUSE
@@ -460,7 +459,7 @@ class BaseParticle {
     this.pos = createVector(x, y);
     this.vel = p5.Vector.random2D();
     this.acc = createVector(0, 0);
-    this.maxSpeed = 3;
+    this.maxSpeed = 5;
   }
 
   applyForce(force) {
@@ -535,7 +534,6 @@ class ParticleTypeC extends BaseParticle {
   }
 }
 
-
 ```
   
 - Un enlace al proyecto en el editor de p5.js.
@@ -546,6 +544,7 @@ https://editor.p5js.org/ThomasHyCr/sketches/cp5th1pa-
 ####
 <img width="620" height="512" alt="image" src="https://github.com/user-attachments/assets/f3cf3faa-6eb0-4229-8234-85c62105283b" />
 <img width="353" height="332" alt="image" src="https://github.com/user-attachments/assets/3eb75343-6910-49df-a4ac-08fb9e19688d" />
+
 
 
 
