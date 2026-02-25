@@ -95,7 +95,7 @@ class Airplane {
 
 ```
 - Rain.js:
-```
+```js
 class Rain {
   constructor() {
     this.reset();
@@ -130,7 +130,7 @@ function updateRain() {
 ```
 
 - Ambient:
-```
+```js
 let airplanes = [];
 let raindrops = [];
 let mode = 1;
@@ -310,6 +310,7 @@ function keyPressed() {
 
 
 ## Bitácora de reflexión
+
 
 
 
