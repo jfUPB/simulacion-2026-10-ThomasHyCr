@@ -314,10 +314,202 @@ function keyPressed() {
 
 ## Bitácora de reflexión
 
-### Explica detalladamente en tu bitácora ¿Qué es el marco de movimiento motion 101 y cómo se relacionan: fuerza, aceleración, velocidad y posición?
+### Explicación
+Explica detalladamente en tu bitácora ¿Qué es el marco de movimiento motion 101 y cómo se relacionan: fuerza, aceleración, velocidad y posición?
 El marco de Motion 101, es un "sistema" de movimiento, basado en una versión simplificada de las formulas fisicas de movimiento, es decir, todo se basa en un cambio de posición y de velocidad, es decir velocidades, aceleraciones, posiciones, y fuerzas. Y sus relaciones, e interacciones entre si, de forma que primero se calculan todas las fuerzas y aceleraciones, y finalmente estos resultados se aplican a la velocidad, y posteriormente a la posición.
 
-### Vas a analizar este video sobre el artista Alexander Calder. Selecciona una de sus obras y luego crea una obra generativa inspirada en la obra de Calder que seleccionaste y el marco de movimiento motion 101 con fuerzas que trabajamos en esta unidad.
+### Analisis y obra
+Vas a analizar este video sobre el artista Alexander Calder. Selecciona una de sus obras y luego crea una obra generativa inspirada en la obra de Calder que seleccionaste y el marco de movimiento motion 101 con fuerzas que trabajamos en esta unidad.
+
+- Código:
+```js
+
+let mainBarLength = 600;
+let branches = [];
+
+// --- VIENTO ---
+let wind;
+let targetWind;
+let windStrength = 0.008; // intensidad base
+let windTime = 0;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight, WEBGL);
+
+  wind = createVector(0, 0, 0);
+  targetWind = createVector(0, 0, 0);
+
+  // Crear ramas principales
+  let total = 6;
+  for (let i = 0; i < total; i++) {
+    let offset = map(i, 0, total - 1, -mainBarLength/2 + 80, mainBarLength/2 - 80);
+    let root = new HangingBranch(null, random(100, 160), random(8, 14), randomColor());
+    root.anchorOffset = offset;
+    generateSubBranches(root, 2);
+    branches.push(root);
+  }
+}
+
+function draw() {
+  background(0);
+
+  orbitControl(1.2, 1.2, 0.5);
+
+  ambientLight(120);
+  directionalLight(255, 255, 255, 0.6, 1, -1);
+
+  translate(0, -150, 0);
+
+  // -------- VIENTO CAÓTICO + CONTROLADO --------
+  windTime += 0.02;
+
+  let turbulence = createVector(
+    map(noise(windTime), 0, 1, -1, 1),
+    0,
+    map(noise(windTime + 200), 0, 1, -1, 1)
+  );
+  turbulence.mult(0.5);
+
+  wind.lerp(targetWind, 0.05);
+  let finalWind = p5.Vector.add(wind, turbulence);
+
+  // -------- BARRA RÍGIDA --------
+  stroke(255);
+  strokeWeight(3);
+  line(-mainBarLength/2, 0, 0, mainBarLength/2, 0, 0);
+
+  // -------- RAMAS --------
+  for (let b of branches) {
+    push();
+    translate(b.anchorOffset, 0, 0);
+    b.update(finalWind);
+    b.display();
+    pop();
+  }
+
+  handleWindInput();
+}
+
+// ------------------ INPUT DE VIENTO ------------------
+function handleWindInput() {
+  let change = 0.02;
+  if (keyIsDown(LEFT_ARROW)) targetWind.x -= change;
+  if (keyIsDown(RIGHT_ARROW)) targetWind.x += change;
+  if (keyIsDown(UP_ARROW)) targetWind.z -= change;
+  if (keyIsDown(DOWN_ARROW)) targetWind.z += change;
+
+  if (keyIsDown(87)) windStrength += 0.0005; // W
+  if (keyIsDown(83)) windStrength -= 0.0005; // S
+
+  if (keyIsDown(32)) targetWind.set(0,0,0); // SPACE
+  windStrength = constrain(windStrength, 0.002, 0.03);
+}
+
+// ------------------ GENERADOR ------------------
+function generateSubBranches(parent, depth) {
+  if (depth <= 0) return;
+
+  let total = floor(random(1, 3));
+  for (let i = 0; i < total; i++) {
+    let child = new HangingBranch(
+      parent,
+      random(70, 120),
+      random(6, 12),
+      randomColor()
+    );
+    parent.children.push(child);
+    generateSubBranches(child, depth - 1);
+  }
+}
+
+// ------------------ CLASE RAMA ------------------
+class HangingBranch {
+  constructor(parent, length, mass, col) {
+    this.parent = parent;
+    this.length = length;
+    this.mass = mass;
+    this.col = col;
+
+    this.children = [];
+
+    this.angleZ = random(-0.2, 0.2);
+    this.angleX = random(-0.2, 0.2);
+
+    this.velZ = 0;
+    this.velX = 0;
+
+    this.gravity = 0.004;
+    this.damping = 0.987;
+    this.maxVel = 0.05;
+
+    this.anchorOffset = 0;
+  }
+
+  update(finalWind) {
+    let accZ = -this.gravity * sin(this.angleZ) + finalWind.x * windStrength;
+    let accX = -this.gravity * sin(this.angleX) + finalWind.z * windStrength;
+
+    this.velZ += accZ;
+    this.velX += accX;
+
+    this.velZ = constrain(this.velZ, -this.maxVel, this.maxVel);
+    this.velX = constrain(this.velX, -this.maxVel, this.maxVel);
+
+    this.angleZ += this.velZ;
+    this.angleX += this.velX;
+
+    this.velZ *= this.damping;
+    this.velX *= this.damping;
+
+    for (let c of this.children) {
+      c.update(finalWind);
+    }
+  }
+
+  display() {
+    push();
+    rotateZ(this.angleZ);
+    rotateX(this.angleX);
+
+    stroke(255);
+    strokeWeight(2);
+    line(0, 0, 0, 0, this.length, 0);
+
+    translate(0, this.length, 0);
+
+    push();
+    noStroke();
+    ambientMaterial(this.col);
+    sphere(this.mass);
+    pop();
+
+    for (let c of this.children) {
+      c.display();
+    }
+    pop();
+  }
+}
+
+// ------------------ PALETA CALDER ------------------
+function randomColor() {
+  let palette = [
+    color(220, 0, 0),
+    color(255),
+    color(20)
+  ];
+  return random(palette);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+```
+- Enlace: https://editor.p5js.org/ThomasHyCr/sketches/DoDefKgFs
+
+- Screenshot:
+<img width="469" height="565" alt="image" src="https://github.com/user-attachments/assets/85f34a18-fbf9-4828-8d88-ca186d530eff" />
+
 
 
 
