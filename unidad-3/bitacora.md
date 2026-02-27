@@ -27,10 +27,13 @@ https://editor.p5js.org/ThomasHyCr/sketches/d9Brw0W5I
 
 ## Bitácora de aplicación 
 
-### Describe el concepto de tu obra generativa. Explica la historia que quieres contar y cómo crees que esta influencierá las fuerzas que usarás para manipular la aceleración de los elementos visuales. En otras palabras, describe el vínculo entre tu narrativa y el sistema de reglas que dará vida a la composición visual.
+### Descripción
+
+Describe el concepto de tu obra generativa. Explica la historia que quieres contar y cómo crees que esta influencierá las fuerzas que usarás para manipular la aceleración de los elementos visuales. En otras palabras, describe el vínculo entre tu narrativa y el sistema de reglas que dará vida a la composición visual.
 Para el concepto, quise simular los distintos climas que pueden atravezar los aviones al volar, de forma que creé 4 modos: Estandar (con un buen lift), Nuboso (con un drag considerable), Ventoso (aumenta la velocidad y ligeramente el lift), y por ultimos Lluvioso (se aplica una fuerza vertical). En resumen se aplican distintas fuerzas en el sistema: Lift, Drag, Gravity, Thrust y Lluvia.
 
 ### El código de la aplicación.
+
 - Plane.js:
 ```js
 class Airplane {
@@ -315,6 +318,7 @@ function keyPressed() {
 El marco de Motion 101, es un "sistema" de movimiento, basado en una versión simplificada de las formulas fisicas de movimiento, es decir, todo se basa en un cambio de posición y de velocidad, es decir velocidades, aceleraciones, posiciones, y fuerzas. Y sus relaciones, e interacciones entre si, de forma que primero se calculan todas las fuerzas y aceleraciones, y finalmente estos resultados se aplican a la velocidad, y posteriormente a la posición.
 
 ### Vas a analizar este video sobre el artista Alexander Calder. Selecciona una de sus obras y luego crea una obra generativa inspirada en la obra de Calder que seleccionaste y el marco de movimiento motion 101 con fuerzas que trabajamos en esta unidad.
+
 
 
 
