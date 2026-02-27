@@ -1,5 +1,5 @@
 # Bitácoras de aprendizaje 2026-10
-
+[Guia](https://juanferfranco.github.io/simulacion-2026-10/)
 Estas bitácoras de aprendizaje buscan evidenciar tu proceso y tus resultados de aprendizaje.
 
 Cada bitácora tendrá las siguientes secciones:
@@ -23,4 +23,24 @@ entrada que hagas el siguiente formato:
 ``` markdown
 ### título de la entrada
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
