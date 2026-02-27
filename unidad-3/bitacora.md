@@ -311,6 +311,12 @@ function keyPressed() {
 
 ## Bitácora de reflexión
 
+### Explica detalladamente en tu bitácora ¿Qué es el marco de movimiento motion 101 y cómo se relacionan: fuerza, aceleración, velocidad y posición?
+El marco de Motion 101, es un "sistema" de movimiento, basado en una versión simplificada de las formulas fisicas de movimiento, es decir, todo se basa en un cambio de posición y de velocidad, es decir velocidades, aceleraciones, posiciones, y fuerzas. Y sus relaciones, e interacciones entre si, de forma que primero se calculan todas las fuerzas y aceleraciones, y finalmente estos resultados se aplican a la velocidad, y posteriormente a la posición.
+
+### Vas a analizar este video sobre el artista Alexander Calder. Selecciona una de sus obras y luego crea una obra generativa inspirada en la obra de Calder que seleccionaste y el marco de movimiento motion 101 con fuerzas que trabajamos en esta unidad.
+
+
 
 
 
