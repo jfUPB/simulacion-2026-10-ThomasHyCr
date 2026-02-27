@@ -305,7 +305,8 @@ function keyPressed() {
 ### Un enlace al proyecto en el editor de p5.js.
 - Enlace: https://editor.p5js.org/ThomasHyCr/sketches/qDTYRA_Vt
 
-### Selecciona capturas de pantalla representativas de tu pieza de arte generativa.
+### Screenshots: 
+Selecciona capturas de pantalla representativas de tu pieza de arte generativa.
 <img width="1086" height="705" alt="image" src="https://github.com/user-attachments/assets/b59caee7-6001-478f-8c16-9a8c42150b1c" />
 <img width="1080" height="707" alt="image" src="https://github.com/user-attachments/assets/bb4e4cc3-0402-4283-bec5-7a08f1b07602" />
 <img width="1071" height="701" alt="image" src="https://github.com/user-attachments/assets/b12594ab-1fc7-40d5-b98f-bf0941e8aa3e" />
@@ -509,6 +510,7 @@ function windowResized() {
 
 - Screenshot:
 <img width="469" height="565" alt="image" src="https://github.com/user-attachments/assets/85f34a18-fbf9-4828-8d88-ca186d530eff" />
+
 
 
 
