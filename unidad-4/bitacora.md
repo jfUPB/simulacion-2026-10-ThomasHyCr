@@ -34,10 +34,43 @@ Está en la clase attractor, pero este ya cuenta con una función que le cambia 
 Le añado las funciones de interacción con el mouse al sketch, y en el attractor, le añadi las funciones, para que que se pueda mover con el mouse, y esto activa los 2 atributos con los que ya contaba anteriormente. 
 
 
+### Actividad 05
+- Observa de nuevo esta parte del código ¿Cuál es la relación entre r y theta con las posiciones x y y? Puedes repasar entonces la definición de coordenadas polares y cómo se convierten a coordenadas cartesianas.
+r y theta son los parametros, bajo los cuales funciona el sistema de coordenadas polares, de modo que en el código se hace una traducción de estos, para que en este funcione con x y y. 
+
+  
+- Modifica la función draw(): ¿Qué ocurre? ¿Por qué?
+El programa no corre, ya que al definir el vector, no sé esta definiendo r como una "parte del vector", ni se hace una traducción de las componentes de esta, y se intenta usar bajo x y y.
+
+
+- Ahora realiza esta modificación: ¿Qué ocurre aquí? ¿Por qué?
+Ahora el programa funciona como con el original, excepto que en este no se cambia el radio del circulo en función de la altura y el seno de theta, sino que está constante.
+
+### Actividad 06
+- Documenta tus reflexiones sobre la función sinusoide en tu bitácora de aprendizaje.
+Es una función muy util para generar ciclos, movimientos ciclicos, dado a su recorrido tan particular y "perfecto".
+
+### Actividad 07
+- Documenta en tu bitácora de aprendizaje el proceso de modificación de la simulación.
+Cambié todo el marco bajo el que funcionaba todo el proyecto, y finalmente puse que el color bajo el que funciona el "show", fuese cada vez que se llama de un color aleatorio usando random()
+
+### Actividad 08
+- Documenta en tu bitácora de aprendizaje el proceso de modificación de la simulación.
+Comencé pasando toda la sección que dibuja la onda, a la función draw, y ahí le modifiqué los parametros para que se dibuje como una ola constantemente-
+
+### Actividad 09
+- Documenta en tu bitácora de aprendizaje el proceso de modificación de la simulación.
+Similar a como fué con ejemplo anterior, modifiqué este código para que el color y el tamaño de la circunferencia se modifique según su coordenada polar.
+
+### Actividad 10
+- Documenta en tu bitácora de aprendizaje el proceso de modificación de la simulación.
+Nuevamente jugué con las coordenadas polares para el tamaño del pendulo, pero además, según el angulo al que se encuentra el pendulo dicta su color.
+
 ## Bitácora de aplicación 
 
 
 
 ## Bitácora de reflexión
+
 
 
