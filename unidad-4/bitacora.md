@@ -68,9 +68,228 @@ Nuevamente jugué con las coordenadas polares para el tamaño del pendulo, pero 
 
 ## Bitácora de aplicación 
 
+### Actividad 11
+- Describe el concepto de tu obra generativa. Recuerda que desde la unidad anterior añadimos la idea de narrativa a la obra generativa, para guiar algunas de las decisiones en la definición de reglas del sistema generativo. PERO OJO, no estamos contando una historia, estamos usando la narrativa como herramienta de diseño para la definición de reglas.
+Quise usar como narrativa esta vez, un pendulo que fuese un reloj de bolsillo, y que este represente el inevitable paso del tiempo, reforzandolo con un sonido y textos tetricos.
+
+
+- El código de la aplicación.
+Pendulum:
+```js
+
+
+class Pendulum {
+  constructor(x, y, r) {
+    // Fill all variables
+    this.pivot = createVector(x, y);
+    this.bob = createVector();
+    this.r = r;
+    this.angle = PI / 4;
+
+    this.angleVelocity = 0.0;
+    this.angleAcceleration = 0.0;
+    this.damping = 0.998; // Arbitrary damping
+    this.ballr = 24.0; // Arbitrary ball radius
+    
+    this.prevAngleVelocity = 0;
+    
+  }
+
+  // Function to update position
+update() {
+  if (!this.dragging) {
+    let gravity = 0.4;
+
+    this.angleAcceleration = ((-1 * gravity) / this.r) * sin(this.angle);
+    this.angleVelocity += this.angleAcceleration;
+    this.angle += this.angleVelocity;
+
+    this.angleVelocity *= this.damping;
+
+    // Detectar cambio de dirección
+    if (this.prevAngleVelocity * this.angleVelocity < 0) {
+      this.onAngularStop();
+    }
+
+    this.prevAngleVelocity = this.angleVelocity;
+  }
+}
+
+  show() {
+
+    // calcular posición del reloj
+    this.bob.set(this.r * sin(this.angle), this.r * cos(this.angle));
+    this.bob.add(this.pivot);
+
+    // cadena
+    stroke(120);
+    strokeWeight(2);
+    line(this.pivot.x, this.pivot.y, this.bob.x, this.bob.y);
+
+    // pivote
+    fill(150);
+    circle(this.pivot.x, this.pivot.y, 8);
+
+    push();
+    translate(this.bob.x, this.bob.y);
+
+    // caja del reloj
+    stroke(80);
+    strokeWeight(3);
+    fill(212,175,55);
+    circle(0, 0, this.ballr * 2.8);
+
+    // carátula
+    fill(245);
+    strokeWeight(1);
+    circle(0, 0, this.ballr * 2.2);
+
+    // marcas de horas
+    stroke(0);
+    for (let i = 0; i < 12; i++) {
+      let a = TWO_PI * i / 12;
+
+      let r1 = this.ballr * 0.8;
+      let r2 = this.ballr * 0.95;
+
+      let x1 = r1 * sin(a);
+      let y1 = -r1 * cos(a);
+
+      let x2 = r2 * sin(a);
+      let y2 = -r2 * cos(a);
+
+      line(x1, y1, x2, y2);
+    }
+
+    // manecilla minutos
+    strokeWeight(2);
+    let minuteAngle = frameCount * 0.02;
+
+    line(
+      0,
+      0,
+      sin(minuteAngle) * this.ballr * 0.8,
+      -cos(minuteAngle) * this.ballr * 0.8
+    );
+
+    // manecilla horas
+    strokeWeight(3);
+    let hourAngle = frameCount * 0.005;
+
+    line(
+      0,
+      0,
+      sin(hourAngle) * this.ballr * 0.5,
+      -cos(hourAngle) * this.ballr * 0.5
+    );
+
+    // centro
+    fill(0);
+    circle(0, 0, 4);
+
+    pop();
+  }
+
+  // The methods below are for mouse interaction
+
+  // This checks to see if we clicked on the pendulum ball
+  clicked(mx, my) {
+    let d = dist(mx, my, this.bob.x, this.bob.y);
+    if (d < this.ballr) {
+      this.dragging = true;
+    }
+  }
+
+  // This tells us we are not longer clicking on the ball
+  stopDragging() {
+    this.angleVelocity = 0; // No velocity once you let go
+    this.dragging = false;
+  }
+
+  drag() {
+    // If we are draging the ball, we calculate the angle between the
+    // pendulum origin and mouse position
+    // we assign that angle to the pendulum
+    if (this.dragging) {
+      let diff = p5.Vector.sub(this.pivot, createVector(mouseX, mouseY)); // Difference between 2 points
+      this.angle = atan2(-1 * diff.y, diff.x) - radians(90); // Angle relative to vertical axis
+    }
+    
+    
+    
+  }
+  
+  
+  
+  onAngularStop() {
+    
+
+
+    
+    let r = random(0, 255); // r is a random number between 0 - 255
+    let g = random(0,255); // g is a random number betwen 100 - 200
+    let b = random(0, 255); // b is a random number between 0 - 100
+    let c = color(r,g,b,255);
+    background(c);
+    bells.play();
+    
+    let choiceTxt = random(txt);
+    
+    fill(255);
+    noStroke();
+    textSize(50);
+    text(choiceTxt, random(height), random(width));
+  }
+}
+
+
+```
+
+
+sketch:
+```js
+
+let pendulum;
+let bells;
+let txt= ['tick','tack','you cant escape time'];
+function setup() {
+  createCanvas(900, 800);
+  // Make a new Pendulum with an origin position and armlength
+  pendulum = new Pendulum(width / 2, 0, 500);
+  bells = loadSound('mm_clocktower_bell.mp3');
+}
+
+function draw() {
+  background(0, 5);
+  pendulum.update();
+  pendulum.show();
+
+  pendulum.drag(); // for user interaction
+}
+
+function mousePressed() {
+  pendulum.clicked(mouseX, mouseY);
+}
+
+function mouseReleased() {
+  pendulum.stopDragging();
+}
+
+
+```
+
+- Un enlace al proyecto en el editor de p5.js.
+https://editor.p5js.org/ThomasHyCr/sketches/MiOfTFzKC
+
+
+- Selecciona capturas de pantalla representativas de tu pieza de arte generativa.
+<img width="884" height="737" alt="image" src="https://github.com/user-attachments/assets/8fe72b0c-df21-43a0-a614-9403082fa874" />
+
+<img width="807" height="616" alt="image" src="https://github.com/user-attachments/assets/23afce0e-b20f-4819-85e9-cdb485fc2cf6" />
 
 
 ## Bitácora de reflexión
+
 
 
 
