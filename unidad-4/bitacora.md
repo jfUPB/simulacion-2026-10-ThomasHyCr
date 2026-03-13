@@ -290,6 +290,13 @@ https://editor.p5js.org/ThomasHyCr/sketches/MiOfTFzKC
 
 ## Bitácora de reflexión
 
+- Realiza un diagrama conceptual (puedes usar excalidraw si quieres) donde incluyas todos los conceptos que has aprendido en las unidades 1 a 4. Relaciona los conceptos entre ellos. Si no sabes por donde comenzar ve al sitio web del libro guía y mira la tabla de contenidos de cada unidad, esto te puede servir de guía.  
+
+[Véase figura 1, en los archivos montados]
+
+
+- Con todo lo que has aprendido hasta ahora, te voy a pedir que pienses cómo lo podrías aplicar a tu perfil profesional. ¿En dónde ves oportunidades?
+
 
 
 
