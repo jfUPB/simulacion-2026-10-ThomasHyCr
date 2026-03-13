@@ -292,10 +292,12 @@ https://editor.p5js.org/ThomasHyCr/sketches/MiOfTFzKC
 
 - Realiza un diagrama conceptual (puedes usar excalidraw si quieres) donde incluyas todos los conceptos que has aprendido en las unidades 1 a 4. Relaciona los conceptos entre ellos. Si no sabes por donde comenzar ve al sitio web del libro guía y mira la tabla de contenidos de cada unidad, esto te puede servir de guía.  
 
-[Véase figura 1, en los archivos montados]
+[Véase figura 1, en los archivos montados]  
+Muchos de estos conceptos se ven relacionados entre si, principalmente porque muchos de ellos al combinarse con otros conceptos se forman, por ejemplo en el marco de Motion 101, se combinan los conceptos de movimiento, vectores, e incluso fuerzas, los cuales después, y a su vez, son los que se usan para los pendulos, etc.
 
 
-- Con todo lo que has aprendido hasta ahora, te voy a pedir que pienses cómo lo podrías aplicar a tu perfil profesional. ¿En dónde ves oportunidades?
+- Con todo lo que has aprendido hasta ahora, te voy a pedir que pienses cómo lo podrías aplicar a tu perfil profesional. ¿En dónde ves oportunidades?  
+Personalmente, creo que prácticamente todo esto puede ser aplicado, ya que mi perfil profesional es el diseño, y los videojuegos, por lo tanto debido a su naturaleza tan versatil, todo, mientras pueda imaginarlo, se puede aplicar.
 
 
 
