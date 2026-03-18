@@ -37,6 +37,28 @@ La particulas permanecerían vivas, y se acumularian, lo que destruiria el rendi
 - ¿Cómo se conecta el “tiempo de vida” con la apariencia visual?
 - Si quisieras cambiar la representación visual (por ejemplo, usar líneas en vez de círculos), ¿Qué cambiarías y qué NO cambiarías?
 
+### Actividad 02
+
+#### Comparación con Example 4.2:
+
+- ¿Qué responsabilidades que antes estaban en draw() ahora están dentro de la clase Emitter?  
+El checkeo constante del tiempo de vida de las particulas
+
+- ¿Cuál es la ventaja de encapsular la lógica de emisión en una clase separada?  
+Que permite una mejor organización, comprensión, y adición de más emisores.
+
+- En este ejemplo hay un array de emitters. ¿Quién crea los emitters? ¿Quién crea las partículas dentro de cada emitter?  
+Cada vez que se da click se hace push de un nuevo emiter, en el emitter, el "addParticle", pushea nuevas particulas, al script particles.
+
+- Dibuja un diagrama que muestre la jerarquía: sketch → [emitters] → [partículas]. ¿Cuántos niveles de “colección” hay?  
+<img width="712" height="467" alt="image" src="https://github.com/user-attachments/assets/04bec3d0-678b-45d2-ad95-7dcb0b604ba7" />
+
+
+
+#### Transferencia conceptual:
+
+- Describe este ejemplo usando palabras que NO mencionen p5.js, JavaScript, ni ninguna herramienta específica. Usa solo términos como: entidad, estado, colección, emisor, ciclo de vida, fuerza.  
+Este ejemplo permite crear emisores de entidades, las cuales comienzan con una fuerza inicial, y se ven sujetas a la gravedad. además cuentan con un tiempo de vida, y lentamente se desvanecen según este avanza.
 
 
 ## Bitácora de aplicación 
