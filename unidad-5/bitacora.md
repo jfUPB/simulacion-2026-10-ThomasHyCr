@@ -63,10 +63,10 @@ En común tienen todos los comportamientos y caracteristicas que no hayan sido s
 - ¿Por qué es importante que el Emitter no necesite saber qué tipo específico de partícula está gestionando? Explica esto con tus propias palabras.  
 Porque esto favorece el añadir nuevos tipos de particulas, sin necesidad de hacerle modificaciones al Emitter, Ergo el principio Open & Close de POO.
 
- -Si mañana quisieras agregar un tercer tipo de partícula, ¿Qué tendrías que crear y qué NO tendrías que modificar?  
+ - Si mañana quisieras agregar un tercer tipo de partícula, ¿Qué tendrías que crear y qué NO tendrías que modificar?  
 Idealmente (no para eficiencia computacional, pero si para eficiencia colaborativa), crear un nuevo tipo de particula, y pasarsela al emitter, de forma que este no tenga que llamarla directamente, sino, simplemente recibir la instancia.
  
- -Compara con Example 4.2: ¿Cambió la lógica del Emitter? ¿Cambió la lógica de muerte? ¿Qué capa del sistema se modificó y cuáles permanecieron intactas?  
+ - Compara con Example 4.2: ¿Cambió la lógica del Emitter? ¿Cambió la lógica de muerte? ¿Qué capa del sistema se modificó y cuáles permanecieron intactas?  
 La lógica del emitter, solo se le añadió el llamado a crear la nueva particula. La lógica de muerte continúa igual, y simplemente se añadió un nuevo tipo de particula que hereda de particle, y tiene un override en el show().
 
 #### Transferencia conceptual:
