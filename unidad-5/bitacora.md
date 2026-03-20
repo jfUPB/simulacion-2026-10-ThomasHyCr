@@ -55,6 +55,20 @@ Cada vez que se da click se hace push de un nuevo emiter, en el emitter, el "add
 
 
 
+### Actividad 03
+
+- ¿Qué tienen en común las subclases de partículas? ¿Qué tienen de diferente?  
+En común tienen todos los comportamientos y caracteristicas que no hayan sido sobre-escritos. De diferente, todo lo sobre-escrito.
+
+- ¿Por qué es importante que el Emitter no necesite saber qué tipo específico de partícula está gestionando? Explica esto con tus propias palabras.  
+Porque esto favorece el añadir nuevos tipos de particulas, sin necesidad de hacerle modificaciones al Emitter, Ergo el principio Open & Close de POO.
+
+ -Si mañana quisieras agregar un tercer tipo de partícula, ¿Qué tendrías que crear y qué NO tendrías que modificar?  
+Idealmente (no para eficiencia computacional, pero si para eficiencia colaborativa), crear un nuevo tipo de particula, y pasarsela al emitter, de forma que este no tenga que llamarla directamente, sino, simplemente recibir la instancia.
+ 
+ -Compara con Example 4.2: ¿Cambió la lógica del Emitter? ¿Cambió la lógica de muerte? ¿Qué capa del sistema se modificó y cuáles permanecieron intactas?  
+La lógica del emitter, solo se le añadió el llamado a crear la nueva particula. La lógica de muerte continúa igual, y simplemente se añadió un nuevo tipo de particula que hereda de particle, y tiene un override en el show().
+
 #### Transferencia conceptual:
 
 - Describe este ejemplo usando palabras que NO mencionen p5.js, JavaScript, ni ninguna herramienta específica. Usa solo términos como: entidad, estado, colección, emisor, ciclo de vida, fuerza.  
