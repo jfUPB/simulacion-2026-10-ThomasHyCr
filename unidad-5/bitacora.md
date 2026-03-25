@@ -86,11 +86,11 @@ Quiero hacer un cerezo con flores, y que al hacerle click a las flores, estas se
 
 
 - **Mapa de decisiones: para cada elemento del sistema, explica la decisión de diseño: ¿Por qué esa emisión, esas fuerzas, esa condición de muerte, esa visualización, qué significa la interacción del usuario dentro del concepto?**  
-Elementos:
-Viento suave - Para de esta forma, tranquilamente ver como las flores atraviezan su ciclo de vida.
-Condición de muerte - Tiempo, hecho aasí para representar que al arrancar la flor, esta comienza su proceso de "muerte".
-Petalos - Al momento de arrancarlo con click, o luego de un tiempo, estos caen lentamente y comienzan a degradarse.
-Estados - Flor, Petalo, Polvo...
+**Elementos:**  
+**Viento suave** - Para de esta forma, tranquilamente ver como las flores atraviezan su ciclo de vida.  
+**Condición de muerte** - Tiempo, hecho aasí para representar que al arrancar la flor, esta comienza su proceso de "muerte".  
+**Petalos** - Al momento de arrancarlo con click, o luego de un tiempo, estos caen lentamente y comienzan a degradarse.  
+**Estados** - Flor, Petalo, Polvo...  
 
 La interacción del usario representa el arrancar la flor, del arbol, lo cual inicia su proceso de degradación.
 
