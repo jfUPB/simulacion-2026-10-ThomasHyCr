@@ -76,6 +76,23 @@ Este ejemplo permite crear emisores de entidades, las cuales comienzan con una f
 
 
 ## Bitácora de aplicación 
+### Concepto
+- **Concepto: 2-3 frases sobre qué ciclo de vida representarás y qué emoción o idea quieres comunicar.**
+Quiero hacer un cerezo con flores, y que al hacerle click a las flores, estas se desprendan del arbol, y lentamente caigan al suelo, cambiando de estado lentamente, hasta volverse polvo.
+
+- **Bocetos: al menos 2 bocetos (pueden ser a mano) que muestren cómo imaginas la pieza antes de programarla.**  
+<img width="1236" height="692" alt="image" src="https://github.com/user-attachments/assets/7cbb82b6-ab83-4ee0-aae0-9b18d167ce0a" />
+<img width="578" height="360" alt="image" src="https://github.com/user-attachments/assets/c9bb8615-14b5-4c64-8c0c-45c2282f2116" />
+
+
+- **Mapa de decisiones: para cada elemento del sistema, explica la decisión de diseño: ¿Por qué esa emisión, esas fuerzas, esa condición de muerte, esa visualización, qué significa la interacción del usuario dentro del concepto?**  
+
+
+- **Implementación: enlace al código en el editor de p5.js + código fuente en la bitácora.**  
+
+
+- **Capturas: al menos 3 capturas de momentos diferentes del ciclo de vida.**  
+
 
 
 ## Bitácora de reflexión
