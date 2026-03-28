@@ -354,3 +354,42 @@ class Dust extends Particle {
 
 
 ## Bitácora de reflexión
+
+### Parte 1 — Principios fundamentales
+
+- **Describe con tus propias palabras cada uno de estos 10 principios:**  
+
+- Una partícula es una entidad con estado.
+Los objetos, en este caso, las particulas, pueden tener diferentes de estados según como se porgramen, entonces sería como un comportamiento.  
+
+- Una partícula tiene ciclo de vida.  
+Las particulas tienen un comienzo, y un final en el que son borradas.  
+
+- Un sistema de partículas gestiona colecciones dinámicas de elementos.  
+Los sistemas de particulas pueden manejar grupos de elementos que pueden cambiar.  
+
+- La creación y eliminación de partículas no es un detalle técnico menor, sino parte central del modelo.  
+Es esencial que se creen y eliminen, para que el modelo funcione y de una manera correcta.  
+
+- Debe haber separación entre la lógica de una partícula individual y la lógica del sistema/emisor.  
+Para un correcto funcionamiento, y seguir los principios SOLID, se deben separar la lógica de las particulas, y la del sistema o emisor.  
+
+- Un emisor o particle system es una abstracción importante.  
+Un emisor o sistema de particulas, puede ser una "simplificación" de algo mucho más complejo.  
+
+- Pueden existir sistemas de sistemas.  
+Se puede tener un emisor, que emita emisores.  
+
+- Puede haber heterogeneidad usando herencia y polimorfismo.  
+Aunque 2 clases hereden de una misma, pueden ser diferentes por el polimorfismo.  
+
+- Las partículas pueden responder a fuerzas globales y locales.  
+Las particulas pueden verse afectadas por fuerzas propias de ellas, o fuerzas globales, que afectan a otras particulas.  
+
+- La representación visual puede variar sin cambiar el principio algorítmico de fondo.  
+Varias particulas que actuen igual, pueden verse diferente, por ejemplo usando polimorfismo.  
+
+### Parte 2 — Transferencia a otra herramienta
+
+#### Piensa en tu pieza del Apply: si la quisieras recrear en Unity (o TouchDesigner, o Blender), ¿Qué se mantendría igual y qué cambiaría? ¿Qué partes de tu diseño son independientes de la herramienta?  
+Cambiaría mucha parte de la lógica, y la apariencia, pero el concepto se mantendría igual, ya que este es independiente de la herramienta.
