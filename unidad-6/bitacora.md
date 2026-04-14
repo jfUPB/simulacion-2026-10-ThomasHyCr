@@ -58,5 +58,30 @@ Cierra la actividad respondiendo:
 
 ## Bitácora de aplicación 
 
+### Actividad 6:
+- **Concepto visual.**  
+
+- **Relación entre la visual y la canción.**  
+
+- **Moodboard o referencias.**  
+
+- **Dos o más bocetos.**  
+
+- **Mapa de decisiones.**  
+
+- **Mapa de interpretación.**  
+
+- **Justificación del algoritmo elegido.**  
+
+- **Explicación de la relación audio-visual.**  
+
+- **Evidencia del uso de IA.**  
+
+- **Código fuente.**  
+
+- **Enlace al sketch.**  
+
+- **Capturas o registros de momentos importantes de la pieza.**  
+
 
 ## Bitácora de reflexión
