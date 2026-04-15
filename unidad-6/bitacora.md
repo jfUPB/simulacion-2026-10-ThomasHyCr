@@ -60,6 +60,8 @@ Cierra la actividad respondiendo:
 
 ### Actividad 6:
 - **Concepto visual.**  
+Quiero que en el proyecto, logre visualizar la canción de forma que se sienta la emoción desbordante que hay en esta, para expresar esto visualmente, quiero hacer que las frecuencias, y la intensidad de estas controlen varios parametros de lo visual, por ejemplo que el nivel, la energia, y la frequencia dicten el color de los agentes que se van a estar moviendo por el canvas. Además, las frecuencias en sí, son lo que van a dictar, hasta cierto punto, como se forma el flow field, y la energia, la velocidad máxima a la que se pueden mover.
+
 
 - **Relación entre la visual y la canción.**  
 
