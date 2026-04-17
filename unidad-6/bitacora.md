@@ -81,10 +81,16 @@ La canción trata sobre la desesperación, y lo abrumador que resulta ser concie
 
 
 - **Mapa de decisiones.**  
-
+Colores oscuros: Desesperación, inquietud lenta.
+Colores intensos: Temperatura aumenta, ansiedad.
+Bloom: Se intensifica la temperatura, y la intranquilidad.
+Chromatic aberration: Fallos.
 
 - **Mapa de interpretación.**  
-
+1: Inicia transición de colores oscuros, a normales.
+2: Inicia transición de colores normales, a oscuros.
+3: Activa el "bloom".
+0: Flash negro, e inmediatamente activa colores normales.
 
 
 - **Justificación del algoritmo elegido.**  
