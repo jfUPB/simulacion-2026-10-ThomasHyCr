@@ -576,7 +576,7 @@ function windowResized() {
 
 - **Enlace al sketch.**
 
-(https://editor.p5js.org/ThomasHyCr/sketches/mWE_jhrxb)
+https://editor.p5js.org/ThomasHyCr/sketches/mWE_jhrxb
 
 - **Capturas o registros de momentos importantes de la pieza.**  
 
