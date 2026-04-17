@@ -75,16 +75,31 @@ La canción trata sobre la desesperación, y lo abrumador que resulta ser concie
 
 
 - **Dos o más bocetos.**  
+<img width="803" height="600" alt="image" src="https://github.com/user-attachments/assets/7489e072-2ca4-4b67-ba69-7274a86d77bc" />
+<img width="922" height="633" alt="image" src="https://github.com/user-attachments/assets/46006706-873a-496a-87de-bcae5be36d41" />
+
+
 
 - **Mapa de decisiones.**  
 
+
 - **Mapa de interpretación.**  
 
+
+
 - **Justificación del algoritmo elegido.**  
+Quise representar como una ciudad envuelta en llamas, y con muchas ascuas moviendose por el aire, y quise además que el movimiento fuese controlado por la musica.
 
 - **Explicación de la relación audio-visual.**  
+Muchas cosas son manejadas por la musica, como lo es la velocidad, el flowfield, los flashes, etc. Y hay otros aspectos como color, y blackflashes que controlo. Esto, mucho lo baso en el "video" músical, que aunque es MUY sencillo, me guió bastante, para todo lo visual.
+
 
 - **Evidencia del uso de IA.**  
+<img width="1470" height="551" alt="image" src="https://github.com/user-attachments/assets/09b5fc79-c13a-4625-b7d0-0bdf4797dcc8" />
+<img width="921" height="473" alt="image" src="https://github.com/user-attachments/assets/758632c7-6fe1-4325-b071-de4ed291e90c" />
+<img width="922" height="545" alt="image" src="https://github.com/user-attachments/assets/c9089c07-54ba-44e5-a158-2d9dd11b6c28" />
+
+
 
 - **Código fuente.**  
 Building.js
