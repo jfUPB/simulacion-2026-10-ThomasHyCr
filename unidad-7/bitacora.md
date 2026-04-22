@@ -1,5 +1,6 @@
 # Unidad 7
-<img width="1000" height="419" alt="image" src="https://github.com/user-attachments/assets/28210e82-8a1d-4b8e-b587-a99675fbbc06" />
+<img width="2580" height="1080" alt="image" src="https://github.com/user-attachments/assets/ff00555d-85e0-4415-86bb-33991a8157e5" />
+
 
 ## Bitácora de proceso de aprendizaje
 ### Actividad 01:
