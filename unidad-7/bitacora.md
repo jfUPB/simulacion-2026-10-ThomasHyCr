@@ -6,16 +6,19 @@
 ### Actividad 01:
 - **Analiza 3 o 4 ejemplos de Ji Lee.**
 - **Explica cómo la manipulación tipográfica refuerza el significado.**
+En estos casos, esta manipulaión, le da vida al significado de estas palabras, ya que lo representan gráficamente.  
 - **Propón 2 o 3 palabras propias y esboza cómo podrían representarse visualmente.**
+Dragón, Nieve (Snow), Obliteración.   
 - **Indica cuál de esas palabras te interesa más y por qué.**
+Nieve (Snow), porque es un concepto que siempre me ha maravillado, y creo que tengo una buena idea para poder representarlo.
 
 ### Actividad 02:
 - **Explica con tus palabras qué hace cada uno de esos conceptos:**
-Engine:  
-World:  
-Bodies:  
-Constraint:  
-MouseConstraint:  
+Engine: Base, o set de herramientas pre-hechas, se usa para crear "productos" más complejos.  
+World: El "canvas", sobre el que se encontrará ensamblado todo.  
+Bodies: Los objetos que interactuan en la simulación.  
+Constraint: Limitadores, ya sea de posición, rotación, u otros parámetros.  
+MouseConstraint: Limitador del mouse, podría ser de una zona en la que se contiene el movimiento del mouse.  
 - **Replica al menos dos experimentos básicos integrando Matter.js con p5.js.**
 - **Incluye código y capturas o enlaces.**
 - **Describe qué tipo de comportamiento físico te interesa explorar en tu palabra.**
