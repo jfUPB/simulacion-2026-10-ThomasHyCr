@@ -1,5 +1,5 @@
 # Unidad 7
-<img width="2580" height="1080" alt="image" src="https://github.com/user-attachments/assets/ff00555d-85e0-4415-86bb-33991a8157e5" />
+<img width="1779" height="877" alt="Mindscape_Ukinami_Yuzuha_Partial" src="https://github.com/user-attachments/assets/197d66c7-2b07-46eb-99b7-3c7e17efadf1" />
 
 
 ## Bitácora de proceso de aprendizaje
