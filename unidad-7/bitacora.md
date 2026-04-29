@@ -159,31 +159,45 @@ La exploración del color, ya que la cancion al ser muy tranquila daría unas va
 
 ### Actividad 04:
 - **Muestra una prueba inicial.**  
-<img width="713" height="475" alt="image" src="https://github.com/user-attachments/assets/9768832c-286d-44d0-9a7b-1c9ad12a122e" />
+<img width="713" height="475" alt="image" src="https://github.com/user-attachments/assets/9768832c-286d-44d0-9a7b-1c9ad12a122e" />  
+
 Aqui no tenia ni reactividad, ni sonidos en general  
+
 - **Explica qué parte de la palabra construiste.**  
+
 La caida de la nieve y la tranquilidad que produce  
+
 - **Explica qué propiedad física manipulaste.**  
+
 La caida de las particulas  
+
 - **Explica qué aspecto del audio afecta qué comportamiento.**  
+
 El audio afecta a los colores del fondo, los cuales toman las tonalidades de una aurora boreal  
+
 - **Evalúa qué funcionó y qué no para el significado que quieres construir.**  
+
 Al principio hubo que hacer muchos cambios, pero el iba bien encaminado, especialmente por la forma en que se forma la palabra.  
+
 ## Bitácora de aplicación   
 
 
 - Palabra elegida.  
 Snow
 - Justificación conceptual.  
-La nieve cae pacificamente, y forma la palabra, además se puede apartar la nieve con el mouse.
+La nieve cae pacificamente, y forma la palabra, además se puede apartar la nieve con el mouse.  
+
 - Análisis de su significado visual y comportamental.  
-la idea es representar un invierno o nieve pacificos, con la iluminacion de las auroras boreales de fondo
+la idea es representar un invierno o nieve pacificos, con la iluminacion de las auroras boreales de fondo  
+
 - Moodboard o referencias.  
 <img width="259" height="194" alt="image" src="https://github.com/user-attachments/assets/a9fefe56-6da7-4a04-a2fc-3823f52c90b7" />
+
 <img width="626" height="376" alt="image" src="https://github.com/user-attachments/assets/eef530dc-aaa6-48af-8bf5-5e264551c8ca" />
  
 - Bocetos.  
 <img width="479" height="356" alt="image" src="https://github.com/user-attachments/assets/2f76b811-b241-4eaa-9507-2875061b747d" />
+
 
 - Mapa de decisiones.  
 Nieve cae automaticamente
@@ -531,7 +545,7 @@ function windowResized() {
 }
 ```
 - Enlace al sketch.  
-https://editor.p5js.org/ThomasHyCr/sketches/t48dHMMW5
+https://editor.p5js.org/ThomasHyCr/sketches/t48dHMMW5  
 - Capturas o registros de la pieza.  
 <img width="1884" height="1065" alt="image" src="https://github.com/user-attachments/assets/c3a49665-adb0-4c9c-97dd-06baabb21cc9" />
 <img width="1361" height="918" alt="image" src="https://github.com/user-attachments/assets/d6199586-7188-40cc-a43c-0e890076a46c" />
