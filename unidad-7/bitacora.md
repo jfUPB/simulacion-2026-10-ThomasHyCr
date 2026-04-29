@@ -23,6 +23,7 @@ MouseConstraint: Limitador del mouse, podría ser de una zona en la que se conti
 - **Incluye código y capturas o enlaces.**
 <img width="494" height="339" alt="image" src="https://github.com/user-attachments/assets/fa4f3f28-49bd-464e-a5a4-380ebde751d1" />
 
+
 ```js
 
 // Importar módulos de Matter.js
@@ -73,6 +74,8 @@ function draw() {
 ```
 
 <img width="486" height="327" alt="image" src="https://github.com/user-attachments/assets/b6942a05-03c3-4628-a1a0-0e85449639f3" />
+
+
 ```js
 
 // Importar Matter.js
