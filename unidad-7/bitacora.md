@@ -152,18 +152,18 @@ En el primero, activa las barras y el color para "ver cada frecuencia con su niv
 La exploración del color, ya que la cancion al ser muy tranquila daría unas variaciones muy tranquilas
 
 ### Actividad 04:
-- **Muestra una prueba inicial.**
+- **Muestra una prueba inicial.**  
 <img width="713" height="475" alt="image" src="https://github.com/user-attachments/assets/9768832c-286d-44d0-9a7b-1c9ad12a122e" />
-Aqui no tenia ni reactividad, ni sonidos en general
-- **Explica qué parte de la palabra construiste.**
-La caida de la nieve y la tranquilidad que produce
-- **Explica qué propiedad física manipulaste.**
-La caida de las particulas
-- **Explica qué aspecto del audio afecta qué comportamiento.**
-El audio afecta a los colores del fondo, los cuales toman las tonalidades de una aurora boreal
-- **Evalúa qué funcionó y qué no para el significado que quieres construir.**
-Al principio hubo que hacer muchos cambios, pero el iba bien encaminado, especialmente por la forma en que se forma la palabra.
-## Bitácora de aplicación 
+Aqui no tenia ni reactividad, ni sonidos en general  
+- **Explica qué parte de la palabra construiste.**  
+La caida de la nieve y la tranquilidad que produce  
+- **Explica qué propiedad física manipulaste.**  
+La caida de las particulas  
+- **Explica qué aspecto del audio afecta qué comportamiento.**  
+El audio afecta a los colores del fondo, los cuales toman las tonalidades de una aurora boreal  
+- **Evalúa qué funcionó y qué no para el significado que quieres construir.**  
+Al principio hubo que hacer muchos cambios, pero el iba bien encaminado, especialmente por la forma en que se forma la palabra.  
+## Bitácora de aplicación   
 
 
 - Palabra elegida.  
